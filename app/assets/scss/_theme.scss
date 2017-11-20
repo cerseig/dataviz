@@ -1,0 +1,27 @@
+/* VARIABLE FONTS */
+$font-barlowblack: 'barlowblack';
+$font-barlowlight: 'barlowlight';
+$font-madablack: 'madablack';
+$font-madalight: 'madalight';
+
+/* VARIABLE COLORS */
+$color-black: #13142C;
+$color-purple: #6A32A5;
+$color-pink: #FF4A69;
+$color-yellow: #FFE650;
+$color-mint: #45F4CA;
+$color-orange: #FF9750;
+$color-lightblue: #66BEFF;
+$color-purpleblue: #6446F2;
+
+
+/* GLOBAL CSS */
+* {
+  box-sizing: border-box;
+}
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+}
