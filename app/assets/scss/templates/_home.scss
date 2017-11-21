@@ -1,29 +1,220 @@
 /* ANIMATIONS */
-@-webkit-keyframes neon1 {
+@-webkit-keyframes neon {
   from {
-    text-shadow: 0 0 2px #fff, 0 0 5px #fff, 0 0 7px #fff, 0 0 8px #FF1177, 0 0 10px #FF1177, 0 0 15px #FF1177, 0 0 25px #FF1177, 0 0 40px #FF1177;
+    text-shadow:0 0 10px rgba(69, 244, 202, 0.5), 0 0 20px rgba(69, 244, 202, 0.5), 0 0 30px rgba(69, 244, 202, 0.5), 0 0 40px rgba(69, 244, 202, 0.5), 0 0 50px rgba(69, 244, 202, 0.5);
   }
   to {
-    text-shadow: 0 0 1px #fff, 0 0 3px #fff, 0 0 4px #fff, 0 0 5px #FF1177, 0 0 8px #FF1177, 0 0 10px #FF1177, 0 0 12px #FF1177, 0 0 25px #FF1177;
+    text-shadow:0 0 5px rgba(69, 244, 202, 0.5), 0 0 10px rgba(69, 244, 202, 0.5), 0 0 15px rgba(69, 244, 202, 0.5), 0 0 20px rgba(69, 244, 202, 0.5), 0 0 25px rgba(69, 244, 202, 0.5);
   }
 }
 
 .home {
   width: 100%;
   height: 100%;
-  h1 {
-    font-family: $font-neon;
-    font-size: 3em;
-    color: #fff;
-    -webkit-transition: all 0.2s;
-    -moz-transition: all 0.2s;
-    transition: all 0.2s;
-    -webkit-animation: neon1 0.3s ease-in-out infinite alternate;
-    -moz-animation: neon1 0.3s ease-in-out infinite alternate;
-    animation: neon1 0.3s ease-in-out infinite alternate;
-    letter-spacing: 2px;
+  background-image: linear-gradient(transparent 0px, transparent 2px, $color-black 2px, $color-black 40px),
+  linear-gradient(to right, $color-mint 0px, $color-mint 2px, $color-black 2px, $color-black 40px);
+  background-size: 20px 20px;
+  user-select: none;
+  .gradient {
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, rgba(19,20, 44, 1) 40%, rgba(19,20, 44, 0.8) 100%);
   }
-  h2 {
-    font-family: $font-mada;
+  .content-home {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .circle1, .circle2, .circle3, .circle4, .circle5, .circle6, .circle7, .circle8, .circle9, .circle10, .circle11 {
+      border-radius: 50%;
+    }
+    .circle1 {
+      position: absolute;
+      top: 110px;
+      left: 150px;
+      width: 10px;
+      height: 10px;
+      background: linear-gradient(226.24deg, $color-yellow 0%,  $color-pink 100%);
+      transform: scale(1);
+      transition: all 1.5s;
+      &.animate {
+          transform: scale(3);
+      }
+    }
+    .circle2 {
+      position: absolute;
+      top: 160px;
+      left: 350px;
+      width: 10px;
+      height: 10px;
+      background: linear-gradient(226.24deg, $color-pink 0%,  $color-purple 100%);
+      transform: scale(1);
+      transition: all 1.5s;
+      &.animate {
+          transform: scale(3);
+      }
+    }
+    .circle3 {
+      position: absolute;
+      top: 80px;
+      left: 420px;
+      width: 25px;
+      height: 25px;
+      background: linear-gradient(226.24deg, $color-mint 0%,  $color-pink 100%);
+      transform: scale(1);
+      transition: all 1.5s;
+      &.animate {
+          transform: scale(3);
+      }
+    }
+    .circle4 {
+      position: absolute;
+      bottom: 190px;
+      left: 120px;
+      width: 10px;
+      height: 10px;
+      background: linear-gradient(226.24deg, $color-mint 0%,  $color-pink 100%);
+      transform: scale(1);
+      transition: all 1.5s;
+      &.animate {
+          transform: scale(3);
+      }
+    }
+    .circle5 {
+      position: absolute;
+      bottom: 50px;
+      left: 210px;
+      width: 70px;
+      height: 70px;
+      background: linear-gradient(226.24deg, $color-mint 0%,  $color-purple 100%);
+      transform: scale(1);
+      transition: all 1.5s;
+      &.animate {
+          transform: scale(3);
+      }
+    }
+    .circle6 {
+      position: absolute;
+      bottom: 140px;
+      left: 380px;
+      width: 45px;
+      height: 45px;
+      background: linear-gradient(226.24deg, $color-lightblue 0%,  $color-pink 100%);
+      transform: scale(1);
+      transition: all 1.5s;
+      &.animate {
+          transform: scale(3);
+      }
+    }
+    .circle7 {
+      position: absolute;
+      bottom: 40px;
+      right: 500px;
+      width: 10px;
+      height: 10px;
+      background: linear-gradient(226.24deg, $color-mint 0%,  $color-pink 100%);
+      transform: scale(1);
+      transition: all 1.5s;
+      &.animate {
+          transform: scale(3);
+      }
+    }
+    .circle8 {
+      position: absolute;
+      bottom: 200px;
+      right: 250px;
+      width: 70px;
+      height: 70px;
+      background: linear-gradient(226.24deg, $color-yellow 0%,  $color-pink 100%);
+      transform: scale(1);
+      transition: all 1.5s;
+      &.animate {
+          transform: scale(3);
+      }
+    }
+    .circle9 {
+      position: absolute;
+      bottom: 110px;
+      right: 210px;
+      width: 25px;
+      height: 25px;
+      background: linear-gradient(226.24deg, $color-pink 0%,  $color-purple 100%);
+      transform: scale(1);
+      transition: all 1.5s;
+      &.animate {
+          transform: scale(3);
+      }
+    }
+    .circle10 {
+      position: absolute;
+      top: 250px;
+      right: 100px;
+      width: 10px;
+      height: 10px;
+      background: linear-gradient(226.24deg, $color-lightblue 0%,  $color-pink 100%);
+      transform: scale(1);
+      transition: all 1.5s;
+      &.animate {
+          transform: scale(3);
+      }
+    }
+    .circle11 {
+      position: absolute;
+      top: 140px;
+      right: 280px;
+      width: 10px;
+      height: 10px;
+      background: linear-gradient(226.24deg, $color-mint 0%,  $color-purple 100%);
+      transform: scale(1);
+      transition: all 1.5s;
+      &.animate {
+          transform: scale(3);
+      }
+    }
+    .middle-content {
+      text-align: center;
+    }
+    h1 {
+      font-family: $font-neon;
+      font-size: 2.5em;
+      color: $color-white;
+      -webkit-transition: all 0.2s;
+      -moz-transition: all 0.2s;
+      transition: all 0.2s;
+      -webkit-animation: neon 1s ease-in-out infinite alternate;
+      -moz-animation: neon 1s ease-in-out infinite alternate;
+      animation: neon 1s ease-in-out infinite alternate;
+      letter-spacing: 5px;
+    }
+    h2 {
+      font-family: $font-muli-xs;
+      font-weight: 300;
+      color: $color-white;
+      font-size: 1em;
+      width: 500px;
+      margin: 50px auto 70px auto;
+    }
+    a {
+      font-family: $font-muli-xs;
+      font-weight: 200;
+      font-size: 0.8em;
+      color: rgba(255, 255, 255, 0.6);
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      padding: 15px 50px;
+      border: 2px solid;
+      transition: all 0.5s ease;
+      border-image: linear-gradient(to right, $color-lightblue, $color-mint) 10;
+      cursor: pointer;
+      &:hover {
+        color: rgba(255, 255, 255, 1);
+        font-weight: 500;
+      }
+    }
   }
+
 }

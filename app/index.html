@@ -20,13 +20,12 @@
               <div class="gradient"></div>
               <div class="content">
                 <div class="loader">
-                  <div class="circle">
-                  coucou
-                  </div>
+                  <div class="circle"></div>
                   <div class="percentage">
+                    <p id="count"></p>
                   </div>
                 </div>
-              </div>  
+              </div>
             </div>
           </div>
         </div>
@@ -38,10 +37,26 @@
           <div class="container-fluid">
             <div class="row">
               <div class="col-12">
-                <h1>Une lueur d'espoir pour les BDDI</h1>
-                <h2>Les étudiants sont-ils optimistes ?</h2>
-                <div class="btn-action">
-                  <a id="start">C'est parti !</a>
+                <div class="gradient"></div>
+                <div class="content-home">
+                  <div class="circle circle1"></div>
+                  <div class="circle circle2"></div>
+                  <div class="circle circle3"></div>
+                  <div class="circle circle4"></div>
+                  <div class="circle circle5"></div>
+                  <div class="circle circle6"></div>
+                  <div class="circle circle7"></div>
+                  <div class="circle circle8"></div>
+                  <div class="circle circle9"></div>
+                  <div class="circle circle10"></div>
+                  <div class="circle circle11"></div>
+                  <div class="middle-content">
+                    <h1>Une lueur d'espoir pour les BDDI</h1>
+                    <h2>Les élèves du Bachelor Designer et D&eacute;veloppeur interactif sont-il optimistes sur leur avenir ?</h2>
+                    <div class="btn-action">
+                      <a id="start">C'est parti !</a>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
@@ -49,6 +64,21 @@
         </section>
 
         <section class="topic1">
+          <div class="container-fluid">
+            <div class="row">
+              <div class="col-12">
+                <div class="content-topic1">
+                  <div class="data">
+                    <div class="dot-grid"></div>
+                    <canvas id="topic1" width="500" height="500"></canvas>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="topic2">
           <div class="container-fluid">
             <div class="row">
               <div class="col-12">
@@ -61,7 +91,7 @@
           </div>
         </section>
 
-        <section class="topic1">
+        <section class="topic3">
           <div class="container-fluid">
             <div class="row">
               <div class="col-12">
@@ -74,7 +104,7 @@
           </div>
         </section>
 
-        <section class="topic1">
+        <section class="topic4">
           <div class="container-fluid">
             <div class="row">
               <div class="col-12">
@@ -87,20 +117,7 @@
           </div>
         </section>
 
-        <section class="topic1">
-          <div class="container-fluid">
-            <div class="row">
-              <div class="col-12">
-                <div class="data">
-                  <canvas id="topic1" width="400" height="400"></canvas>
-                  <div class="dot-grid"></div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        <section class="topic1">
+        <section class="topic5">
           <div class="container-fluid">
             <div class="row">
               <div class="col-12">
@@ -147,10 +164,18 @@
       </div>
 
       <!-- LIBRARIES -->
-      <script type="text/javascript" src="assets/js/jquery-libraries/jquery-3.2.1.min.js"></script>
+      <script src="http://code.jquery.com/jquery-1.9.0b1.js"></script>
+      <!-- <script type="text/javascript" src="assets/js/jquery-libraries/jquery-3.2.1.min.js"></script> -->
 
       <!-- MAIN JS  -->
       <script type="text/javascript" src="assets/js/app.js"></script>
+
+      <script>
+        // Le DOM est pret
+        $(document).ready(function() {
+          $.pageLoader();
+        });
+      </script>
 
     </body>
 </html>
