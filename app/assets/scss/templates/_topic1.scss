@@ -1,0 +1,22 @@
+.topic1 {
+  width: 100%;
+  height: 100%;
+  .data {
+    width: 500px;
+    height: 500px;
+    position: relative;
+  }
+  .dot-grid, canvas {
+    width: 500px;
+    height: 500px;
+    position: absolute;
+  }
+  .dot-grid {
+    // background-image: linear-gradient(transparent 0px, transparent 2px, $color-black 2px, $color-black 40px),
+    // linear-gradient(to right, $color-mint 0px, $color-mint 2px, $color-black 2px, $color-black 40px);
+    // background-size: 20px 20px;
+    // user-select: none;
+    background-image: radial-gradient($color-mint 5%, transparent 0);
+    background-size: 30px 30px;
+  }
+}

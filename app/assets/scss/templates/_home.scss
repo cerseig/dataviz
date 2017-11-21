@@ -1,0 +1,29 @@
+/* ANIMATIONS */
+@-webkit-keyframes neon1 {
+  from {
+    text-shadow: 0 0 2px #fff, 0 0 5px #fff, 0 0 7px #fff, 0 0 8px #FF1177, 0 0 10px #FF1177, 0 0 15px #FF1177, 0 0 25px #FF1177, 0 0 40px #FF1177;
+  }
+  to {
+    text-shadow: 0 0 1px #fff, 0 0 3px #fff, 0 0 4px #fff, 0 0 5px #FF1177, 0 0 8px #FF1177, 0 0 10px #FF1177, 0 0 12px #FF1177, 0 0 25px #FF1177;
+  }
+}
+
+.home {
+  width: 100%;
+  height: 100%;
+  h1 {
+    font-family: $font-neon;
+    font-size: 3em;
+    color: #fff;
+    -webkit-transition: all 0.2s;
+    -moz-transition: all 0.2s;
+    transition: all 0.2s;
+    -webkit-animation: neon1 0.3s ease-in-out infinite alternate;
+    -moz-animation: neon1 0.3s ease-in-out infinite alternate;
+    animation: neon1 0.3s ease-in-out infinite alternate;
+    letter-spacing: 2px;
+  }
+  h2 {
+    font-family: $font-mada;
+  }
+}

@@ -11,6 +11,7 @@ $color-mint: #45F4CA;
 $color-orange: #FF9750;
 $color-lightblue: #66BEFF;
 $color-purpleblue: #6446F2;
+$color-white: #fefefe;
 
 /* GLOBAL CSS */
 * {
@@ -21,10 +22,26 @@ html, body {
   padding: 0;
   width: 100%;
   height: 100%;
+  background-color: $color-black;
 }
 h1, h2, h3, h4, h5, h6, p {
   margin: 0;
 }
 a, a:hover {
   text-decoration: none;
+}
+main {
+  width: 100%;
+  height: 100%;
+}
+section {
+  width: 100%;
+  height: 100%;
+}
+.container-fluid, .row, .col-12 {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  position: relative;
 }

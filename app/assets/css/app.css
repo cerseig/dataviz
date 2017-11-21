@@ -9,7 +9,8 @@ html, body {
   margin: 0;
   padding: 0;
   width: 100%;
-  height: 100%; }
+  height: 100%;
+  background-color: #13142C; }
 
 h1, h2, h3, h4, h5, h6, p {
   margin: 0; }
@@ -17,10 +18,25 @@ h1, h2, h3, h4, h5, h6, p {
 a, a:hover {
   text-decoration: none; }
 
+main {
+  width: 100%;
+  height: 100%; }
+
+section {
+  width: 100%;
+  height: 100%; }
+
+.container-fluid, .row, .col-12 {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  position: relative; }
+
 /* FONTS */
 @font-face {
   font-family: 'neoneonregular';
-  src: url("neoneon-webfont.woff2") format("woff2"), url("neoneon-webfont.woff") format("woff"), url("neoneon-webfont.ttf") format("truetype");
+  src: url("../fonts/neoneon-webfont.woff2") format("woff2"), url("../fonts/neoneon-webfont.woff") format("woff"), url("../fonts/neoneon-webfont.ttf") format("truetype");
   font-weight: normal;
   font-style: normal; }
 
@@ -43,3 +59,58 @@ a, a:hover {
   font-style: normal; }
 
 /* TEMPLATES OF SECTIONS */
+.loading {
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(transparent 0px, transparent 2px, #13142C 2px, #13142C 40px), linear-gradient(to right, #45F4CA 0px, #45F4CA 2px, #13142C 2px, #13142C 40px);
+  background-size: 20px 20px;
+  user-select: none; }
+  .loading .gradient {
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, #13142c 40%, rgba(19, 20, 44, 0.7) 100%); }
+  .loading .content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%; }
+
+/* ANIMATIONS */
+@-webkit-keyframes neon1 {
+  from {
+    text-shadow: 0 0 2px #fff, 0 0 5px #fff, 0 0 7px #fff, 0 0 8px #FF1177, 0 0 10px #FF1177, 0 0 15px #FF1177, 0 0 25px #FF1177, 0 0 40px #FF1177; }
+  to {
+    text-shadow: 0 0 1px #fff, 0 0 3px #fff, 0 0 4px #fff, 0 0 5px #FF1177, 0 0 8px #FF1177, 0 0 10px #FF1177, 0 0 12px #FF1177, 0 0 25px #FF1177; } }
+
+.home {
+  width: 100%;
+  height: 100%; }
+  .home h1 {
+    font-family: "neoneonregular";
+    font-size: 3em;
+    color: #fff;
+    -webkit-transition: all 0.2s;
+    -moz-transition: all 0.2s;
+    transition: all 0.2s;
+    -webkit-animation: neon1 0.3s ease-in-out infinite alternate;
+    -moz-animation: neon1 0.3s ease-in-out infinite alternate;
+    animation: neon1 0.3s ease-in-out infinite alternate;
+    letter-spacing: 2px; }
+  .home h2 {
+    font-family: "madalight"; }
+
+.topic1 {
+  width: 100%;
+  height: 100%; }
+  .topic1 .data {
+    width: 500px;
+    height: 500px;
+    position: relative; }
+  .topic1 .dot-grid, .topic1 canvas {
+    width: 500px;
+    height: 500px;
+    position: absolute; }
+  .topic1 .dot-grid {
+    background-image: radial-gradient(#45F4CA 5%, transparent 0);
+    background-size: 30px 30px; }
