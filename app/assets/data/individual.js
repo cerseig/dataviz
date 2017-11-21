@@ -1,4 +1,4 @@
-[
+var individual = [
 	{
 		"Est-ce que vous pensez souvent à votre futur ?": "Tous les jours",
 		"Votre futur vous fait-il peur ? ": "Non",

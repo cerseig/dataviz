@@ -11,16 +11,16 @@ html, body {
   width: 100%;
   height: 100%; }
 
+h1, h2, h3, h4, h5, h6, p {
+  margin: 0; }
+
+a, a:hover {
+  text-decoration: none; }
+
 /* FONTS */
 @font-face {
-  font-family: 'madablack';
-  src: url("../fonts/mada-black-webfont.woff2") format("woff2"), url("../fonts/mada-black-webfont.woff") format("woff");
-  font-weight: normal;
-  font-style: normal; }
-
-@font-face {
-  font-family: 'madabold';
-  src: url("../fonts/mada-bold-webfont.woff2") format("woff2"), url("../fonts/mada-bold-webfont.woff") format("woff");
+  font-family: 'neoneonregular';
+  src: url("neoneon-webfont.woff2") format("woff2"), url("neoneon-webfont.woff") format("woff"), url("neoneon-webfont.ttf") format("truetype");
   font-weight: normal;
   font-style: normal; }
 
@@ -37,128 +37,8 @@ html, body {
   font-style: normal; }
 
 @font-face {
-  font-family: 'madamedium';
-  src: url("../fonts/mada-medium-webfont.woff2") format("woff2"), url("../fonts/mada-medium-webfont.woff") format("woff");
-  font-weight: normal;
-  font-style: normal; }
-
-@font-face {
   font-family: 'madaregular';
   src: url("../fonts/mada-regular-webfont.woff2") format("woff2"), url("../fonts/mada-regular-webfont.woff") format("woff");
-  font-weight: normal;
-  font-style: normal; }
-
-@font-face {
-  font-family: 'madasemibold';
-  src: url("../fonts/mada-semibold-webfont.woff2") format("woff2"), url("../fonts/mada-semibold-webfont.woff") format("woff");
-  font-weight: normal;
-  font-style: normal; }
-
-@font-face {
-  font-family: 'barlowblack';
-  src: url("../fonts/barlow-black-webfont.woff2") format("woff2"), url("../fonts/barlow-black-webfont.woff") format("woff");
-  font-weight: normal;
-  font-style: normal; }
-
-@font-face {
-  font-family: 'barlowbold';
-  src: url("../fonts/barlow-bold-webfont.woff2") format("woff2"), url("../fonts/barlow-bold-webfont.woff") format("woff");
-  font-weight: normal;
-  font-style: normal; }
-
-@font-face {
-  font-family: 'barlowextrabold';
-  src: url("../fonts/barlow-extrabold-webfont.woff2") format("woff2"), url("../fonts/barlow-extrabold-webfont.woff") format("woff");
-  font-weight: normal;
-  font-style: normal; }
-
-@font-face {
-  font-family: 'barlowextralight';
-  src: url("../fonts/barlow-extralight-webfont.woff2") format("woff2"), url("../fonts/barlow-extralight-webfont.woff") format("woff");
-  font-weight: normal;
-  font-style: normal; }
-
-@font-face {
-  font-family: 'barlowlight';
-  src: url("../fonts/barlow-light-webfont.woff2") format("woff2"), url("../fonts/barlow-light-webfont.woff") format("woff");
-  font-weight: normal;
-  font-style: normal; }
-
-@font-face {
-  font-family: 'barlowmedium';
-  src: url("../fonts/barlow-medium-webfont.woff2") format("woff2"), url("../fonts/barlow-medium-webfont.woff") format("woff");
-  font-weight: normal;
-  font-style: normal; }
-
-@font-face {
-  font-family: 'barlowregular';
-  src: url("../fonts/barlow-regular-webfont.woff2") format("woff2"), url("../fonts/barlow-regular-webfont.woff") format("woff");
-  font-weight: normal;
-  font-style: normal; }
-
-@font-face {
-  font-family: 'barlowsemibold';
-  src: url("../fonts/barlow-semibold-webfont.woff2") format("woff2"), url("../fonts/barlow-semibold-webfont.woff") format("woff");
-  font-weight: normal;
-  font-style: normal; }
-
-@font-face {
-  font-family: 'barlowthin';
-  src: url("../fonts/barlow-thin-webfont.woff2") format("woff2"), url("../fonts/barlow-thin-webfont.woff") format("woff");
-  font-weight: normal;
-  font-style: normal; }
-
-@font-face {
-  font-family: 'barlow_semi_condensedblack';
-  src: url("../fonts/barlowsemicondensed-black-webfont.woff2") format("woff2"), url("../fonts/barlowsemicondensed-black-webfont.woff") format("woff");
-  font-weight: normal;
-  font-style: normal; }
-
-@font-face {
-  font-family: 'barlow_semi_condensedbold';
-  src: url("../fonts/barlowsemicondensed-bold-webfont.woff2") format("woff2"), url("../fonts/barlowsemicondensed-bold-webfont.woff") format("woff");
-  font-weight: normal;
-  font-style: normal; }
-
-@font-face {
-  font-family: 'barlow_semi_condensedXBd';
-  src: url("../fonts/barlowsemicondensed-extrabold-webfont.woff2") format("woff2"), url("../fonts/barlowsemicondensed-extrabold-webfont.woff") format("woff");
-  font-weight: normal;
-  font-style: normal; }
-
-@font-face {
-  font-family: 'barlow_semi_condensedXLt';
-  src: url("../fonts/barlowsemicondensed-extralight-webfont.woff2") format("woff2"), url("../fonts/barlowsemicondensed-extralight-webfont.woff") format("woff");
-  font-weight: normal;
-  font-style: normal; }
-
-@font-face {
-  font-family: 'barlow_semi_condensedlight';
-  src: url("../fonts/barlowsemicondensed-light-webfont.woff2") format("woff2"), url("../fonts/barlowsemicondensed-light-webfont.woff") format("woff");
-  font-weight: normal;
-  font-style: normal; }
-
-@font-face {
-  font-family: 'barlow_semi_condensedmedium';
-  src: url("../fonts/barlowsemicondensed-medium-webfont.woff2") format("woff2"), url("../fonts/barlowsemicondensed-medium-webfont.woff") format("woff");
-  font-weight: normal;
-  font-style: normal; }
-
-@font-face {
-  font-family: 'barlow_semi_condensedregular';
-  src: url("../fonts/barlowsemicondensed-regular-webfont.woff2") format("woff2"), url("../fonts/barlowsemicondensed-regular-webfont.woff") format("woff");
-  font-weight: normal;
-  font-style: normal; }
-
-@font-face {
-  font-family: 'barlow_semi_condensedsemibold';
-  src: url("../fonts/barlowsemicondensed-semibold-webfont.woff2") format("woff2"), url("../fonts/barlowsemicondensed-semibold-webfont.woff") format("woff");
-  font-weight: normal;
-  font-style: normal; }
-
-@font-face {
-  font-family: 'barlow_semi_condensedthin';
-  src: url("../fonts/barlowsemicondensed-thin-webfont.woff2") format("woff2"), url("../fonts/barlowsemicondensed-thin-webfont.woff") format("woff");
   font-weight: normal;
   font-style: normal; }
 

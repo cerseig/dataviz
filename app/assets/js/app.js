@@ -2,7 +2,9 @@
 //     $('.loader').css('display', 'none')
 // }
 
-console.log(sumup);
+console.log(summary);
+
+$('#test').text(summary.questions[0].title)
 
 function setup() {
  createCanvas(windowWidth, windowHeight);
