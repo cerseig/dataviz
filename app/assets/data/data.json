@@ -9,19 +9,79 @@
           "name": "Tous les jours",
           "people": 10,
           "percent": "26,3",
-          "result": "Y pensent tous les jours"
+          "result": "Y pensent tous les jours",
+          "afraid": [
+            {
+              "name": "Oui",
+              "people": 2,
+              "percent": "20",
+              "result": "Parmis les 10 élèves qui y pensent <span>tous les jours</span>, <small>2</small> ont répondu 'Oui'"
+            },
+            {
+              "name": "Non",
+              "people": 2,
+              "percent": "20",
+              "result": "Parmis les 10 élèves qui y pensent <span>tous les jours</span>, <small>2</small> ont répondu 'Non'"
+            },
+            {
+              "name": "Un peu",
+              "people": 6,
+              "percent": "60",
+              "result": "Parmis les 10 élèves qui y pensent <span>tous les jours</span>, <small>6</small> ont répondu 'Un peu'"
+            }
+          ]
         },
         {
           "name": "Souvent",
           "people": 16,
           "percent": "42,1",
-          "result": "Y pensent souvent"
+          "result": "Y pensent souvent",
+          "afraid": [
+            {
+              "name": "Oui",
+              "people": 3,
+              "percent": "18",
+              "result": "Parmis les 16 élèves qui y pensent souvent, 3 ont répondu 'Oui'"
+            },
+            {
+              "name": "Non",
+              "people": 2,
+              "percent": "12",
+              "result": "Parmis les 16 élèves qui y pensent souvent, 2 ont répondu 'Non'"
+            },
+            {
+              "name": "Un peu",
+              "people": 11,
+              "percent": "70",
+              "result": "Parmis les 16 élèves qui y pensent souvent, 11 ont répondu 'Un peu'"
+            }
+          ]
         },
         {
           "name": "De temps en temps",
           "people": 12,
           "percent": "31,6",
-          "result": "Y pensent de temps en temps"
+          "result": "Y pensent de temps en temps",
+          "afraid": [
+            {
+              "name": "Oui",
+              "people": 1,
+              "percent": "9",
+              "result": "Parmis les 12 élèves qui y pensent de temps en temps, 1 a répondu 'Oui'"
+            },
+            {
+              "name": "Non",
+              "people": 7,
+              "percent": "64",
+              "result": "Parmis les 12 élèves 12 qui y pensent de temps en temps, 7 ont répondu 'Non'"
+            },
+            {
+              "name": "Un peu",
+              "people": 4,
+              "percent": "27",
+              "result": "Parmis les 12 élèves qui y pensent de temps en temps, 4 ont répondu 'Un peu'"
+            }
+          ]
         },
         {
           "name": "Jamais",

@@ -110,20 +110,60 @@
       bottom: 0;
       right: 0;
     }
-    .dot-grid, #vizualisation {
+    .dot-grid, #vizualisation1, #vizualisation2 {
       width: 500px;
       height: 500px;
       position: absolute;
     }
-    #vizualisation {
+    #vizualisation1 {
       display: flex;
       justify-content: center;
       align-items: center;
+      span {
+        margin: 0 10px;
+        cursor: pointer;
+      }
     }
-    object {
-      margin: 0 10px;
-      cursor: pointer;
+    #vizualisation2 {
+      display: none;
+      span {
+        margin: 0 10px;
+        cursor: pointer;
+      }
     }
+    h5 {
+      color: $color-white;
+      position: absolute;
+      text-transform: uppercase;
+      font-family: $font-muli-xs;
+      letter-spacing: 2px;
+      font-size: 0.8em;
+      &.top {
+        display: none;
+        left: 50%;
+        transform: translateX(-50%);
+        top: 0;
+      }
+      &.bottom {
+        display: none;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+      }
+      &.left {
+
+        left: -65px;
+        top: 50%;
+        transform: rotate(-90deg) translateY(-50%);
+      }
+      &.right {
+
+        right: -50px;
+        top: 50%;
+        transform: rotate(90deg) translateY(-50%);
+      }
+    }
+
     .dot-grid {
       background-image: radial-gradient(rgba(69, 244, 202, 0.6) 5%, transparent 0);
       background-size: 20px 20px;
