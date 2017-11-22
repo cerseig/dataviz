@@ -248,6 +248,7 @@ section {
     .home .content-home h1 {
       font-family: "neoneonregular";
       font-size: 2.5em;
+      font-weight: 200;
       color: #fefefe;
       -webkit-transition: all 0.2s;
       -moz-transition: all 0.2s;
@@ -282,17 +283,107 @@ section {
 .topic1 {
   display: none; }
   .topic1 .content-topic1 {
-    width: 100%;
-    height: 100%;
-    padding: 60px; }
+    width: calc(100% - 120px);
+    height: calc(100% - 120px);
+    margin: 60px;
+    position: relative; }
+    .topic1 .content-topic1 .col-lg-5, .topic1 .content-topic1 .col-lg-7 {
+      padding: 0; }
+    .topic1 .content-topic1 h3 {
+      font-family: "neoneonregular";
+      font-size: 3em;
+      color: #fefefe;
+      font-weight: 200;
+      text-shadow: 0 0 10px rgba(69, 244, 202, 0.3), 0 0 20px rgba(69, 244, 202, 0.3), 0 0 30px rgba(69, 244, 202, 0.3), 0 0 40px rgba(69, 244, 202, 0.3), 0 0 50px rgba(69, 244, 202, 0.3); }
+      .topic1 .content-topic1 h3 span {
+        color: #45F4CA; }
+    .topic1 .content-topic1 .title-part2 {
+      display: none; }
+    .topic1 .content-topic1 .result {
+      color: #fefefe;
+      width: 100%;
+      height: 200px;
+      display: flex;
+      align-items: center; }
+      .topic1 .content-topic1 .result h4 {
+        font-family: "mulilight";
+        font-size: 2em;
+        letter-spacing: 2px; }
+      .topic1 .content-topic1 .result p {
+        font-family: "mulilight";
+        font-size: 0.8em;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        color: #45F4CA; }
+    .topic1 .content-topic1 .legend {
+      position: absolute;
+      bottom: 100px; }
+      .topic1 .content-topic1 .legend ul {
+        padding: 0; }
+        .topic1 .content-topic1 .legend ul li {
+          list-style: none;
+          display: flex;
+          align-items: center;
+          margin: 15px 0; }
+          .topic1 .content-topic1 .legend ul li .topic1-circle1 {
+            width: 20px;
+            height: 20px;
+            background: linear-gradient(226.24deg, #45F4CA 0%, #66BEFF 100%);
+            border-radius: 50%; }
+          .topic1 .content-topic1 .legend ul li .topic1-circle2 {
+            width: 20px;
+            height: 20px;
+            background: linear-gradient(226.24deg, #66BEFF 0%, #FF4A69 100%);
+            border-radius: 50%; }
+          .topic1 .content-topic1 .legend ul li .topic1-circle3 {
+            width: 20px;
+            height: 20px;
+            background: linear-gradient(226.24deg, #FFE650 0%, #FF4A69 100%);
+            border-radius: 50%; }
+          .topic1 .content-topic1 .legend ul li p {
+            margin-left: 20px;
+            color: #fefefe;
+            font-family: "muliextralight";
+            text-transform: uppercase;
+            font-size: 0.8em;
+            letter-spacing: 1px; }
+    .topic1 .content-topic1 a {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      font-family: "muliextralight";
+      font-weight: 200;
+      font-size: 0.8em;
+      color: rgba(255, 255, 255, 0.6);
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      padding: 15px 50px;
+      border: 2px solid;
+      transition: all 0.5s ease;
+      border-image: linear-gradient(to right, #66BEFF, #45F4CA) 10;
+      cursor: pointer; }
+      .topic1 .content-topic1 a:hover {
+        color: white;
+        font-weight: 500; }
+    .topic1 .content-topic1 #go-topic2 {
+      display: none; }
     .topic1 .content-topic1 .data {
       width: 500px;
       height: 500px;
-      position: relative; }
-    .topic1 .content-topic1 .dot-grid, .topic1 .content-topic1 canvas {
+      position: absolute;
+      bottom: 0;
+      right: 0; }
+    .topic1 .content-topic1 .dot-grid, .topic1 .content-topic1 #vizualisation {
       width: 500px;
       height: 500px;
       position: absolute; }
+    .topic1 .content-topic1 #vizualisation {
+      display: flex;
+      justify-content: center;
+      align-items: center; }
+    .topic1 .content-topic1 object {
+      margin: 0 10px;
+      cursor: pointer; }
     .topic1 .content-topic1 .dot-grid {
       background-image: radial-gradient(rgba(69, 244, 202, 0.6) 5%, transparent 0);
       background-size: 20px 20px; }

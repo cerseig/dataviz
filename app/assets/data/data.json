@@ -8,22 +8,26 @@
         {
           "name": "Tous les jours",
           "people": 10,
-          "percent": "26,3"
+          "percent": "26,3",
+          "result": "Y pensent tous les jours"
         },
         {
           "name": "Souvent",
           "people": 16,
-          "percent": "42,1"
+          "percent": "42,1",
+          "result": "Y pensent souvent"
         },
         {
           "name": "De temps en temps",
           "people": 12,
-          "percent": "31,6"
+          "percent": "31,6",
+          "result": "Y pensent de temps en temps"
         },
         {
           "name": "Jamais",
           "people": 0,
-          "percent": "0"
+          "percent": "0",
+          "result": ""
         }
       ]
     },
@@ -32,18 +36,21 @@
       "responses": [
         {
           "name": "Oui",
-          "people": "6",
-          "percent": "15,8"
+          "people": 6,
+          "percent": "15,8",
+          "result": ""
         },
         {
           "name": "Non",
-          "people": "12",
-          "percent": "31,6"
+          "people": 12,
+          "percent": "31,6",
+          "result": ""
         },
         {
           "name": "Un peu",
-          "people": "20",
-          "percent": "52,6"
+          "people": 20,
+          "percent": "52,6",
+          "result": ""
         }
       ]
     },

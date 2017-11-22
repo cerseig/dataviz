@@ -52,7 +52,7 @@
                   <div class="circle circle11"></div>
                   <div class="middle-content">
                     <h1>Une lueur d'espoir pour les BDDI</h1>
-                    <h2>Les élèves du Bachelor Designer et D&eacute;veloppeur interactif sont-il optimistes sur leur avenir ?</h2>
+                    <h2>Les élèves du Bachelor Designer et Développeur interactif sont-il optimistes sur leur avenir ?</h2>
                     <div class="btn-action">
                       <a id="start">C'est parti !</a>
                     </div>
@@ -68,9 +68,43 @@
             <div class="row">
               <div class="col-12">
                 <div class="content-topic1">
-                  <div class="data">
-                    <div class="dot-grid"></div>
-                    <canvas id="topic1" width="500" height="500"></canvas>
+                  <div class="row">
+                    <div class="col-lg-5">
+                      <h3 class="title-part1"><span>Les BDDI</span><br> pensent-ils<br> à leur futur ?</h3>
+                      <h3 class="title-part2"><span>Les BDDI</span><br> ont-ils peur<br> de leur futur ?</h3>
+                      <div class="result">
+                        <div>
+                          <h4 id="percent"></h4>
+                          <p id="result"></p>
+                        </div>
+                      </div>
+                      <div class="legend">
+                        <ul>
+                          <li>
+                            <div class="topic1-circle1"></div>
+                            <p>Tous les jours</p>
+                          </li>
+                          <li>
+                            <div class="topic1-circle2"></div>
+                            <p>Souvent</p>
+                          </li>
+                          <li>
+                            <div class="topic1-circle3"></div>
+                            <p>De temps en temps</p>
+                          </li>
+                        </ul>
+                      </div>
+                      <div class="btn-action">
+                        <a id="go-topic1-part2">En ont-ils peur ?</a>
+                        <a id="go-topic2">Suivant</a>
+                      </div>
+                    </div>
+                    <div class="col-lg-7">
+                      <div class="data">
+                        <div class="dot-grid"></div>
+                        <div id="vizualisation"></div>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -168,6 +202,7 @@
       <!-- <script type="text/javascript" src="assets/js/jquery-libraries/jquery-3.2.1.min.js"></script> -->
 
       <!-- MAIN JS  -->
+      <script type="text/javascript" src="assets/js/loader.js"></script>
       <script type="text/javascript" src="assets/js/app.js"></script>
 
       <script>

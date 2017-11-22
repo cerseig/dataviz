@@ -1,18 +1,128 @@
 .topic1 {
   display: none;
   .content-topic1 {
-    width: 100%;
-    height: 100%;
-    padding: 60px;
+    width: calc(100% - 120px);
+    height: calc(100% - 120px);
+    margin: 60px;
+    position: relative;
+    .col-lg-5, .col-lg-7 {
+      padding: 0;
+    }
+    h3 {
+      font-family: $font-neon;
+      font-size: 3em;
+      color: $color-white;
+      font-weight: 200;
+      text-shadow:0 0 10px rgba(69, 244, 202, 0.3), 0 0 20px rgba(69, 244, 202, 0.3), 0 0 30px rgba(69, 244, 202, 0.3), 0 0 40px rgba(69, 244, 202, 0.3), 0 0 50px rgba(69, 244, 202, 0.3);
+      & span {
+        color: $color-mint;
+      }
+    }
+    .title-part2 {
+      display: none;
+    }
+    .result {
+      color: $color-white;
+      width: 100%;
+      height: 200px;
+      display: flex;
+      align-items: center;
+      h4 {
+        font-family: $font-muli-s;
+        font-size: 2em;
+        letter-spacing: 2px;
+      }
+      p {
+        font-family: $font-muli-s;
+        font-size: 0.8em;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        color: $color-mint;
+      }
+
+    }
+    .legend {
+      position: absolute;
+      bottom: 100px;
+      ul {
+        padding: 0;
+        li {
+          list-style: none;
+          display: flex;
+          align-items: center;
+          margin: 15px 0;
+          .topic1-circle1 {
+            width: 20px;
+            height: 20px;
+            background: linear-gradient(226.24deg, $color-mint 0%,  $color-lightblue 100%);
+            border-radius: 50%;
+          }
+          .topic1-circle2 {
+            width: 20px;
+            height: 20px;
+            background: linear-gradient(226.24deg, $color-lightblue 0%,  $color-pink 100%);
+            border-radius: 50%;
+          }
+          .topic1-circle3 {
+            width: 20px;
+            height: 20px;
+            background: linear-gradient(226.24deg, $color-yellow 0%,  $color-pink 100%);
+            border-radius: 50%;
+          }
+          p {
+            margin-left: 20px;
+            color: $color-white;
+            font-family: $font-muli-xs;
+            text-transform: uppercase;
+            font-size: 0.8em;
+            letter-spacing: 1px;
+          }
+        }
+      }
+    }
+    a {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      font-family: $font-muli-xs;
+      font-weight: 200;
+      font-size: 0.8em;
+      color: rgba(255, 255, 255, 0.6);
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      padding: 15px 50px;
+      border: 2px solid;
+      transition: all 0.5s ease;
+      border-image: linear-gradient(to right, $color-lightblue, $color-mint) 10;
+      cursor: pointer;
+      &:hover {
+        color: rgba(255, 255, 255, 1);
+        font-weight: 500;
+      }
+    }
+    #go-topic2 {
+      display: none;
+    }
     .data {
       width: 500px;
       height: 500px;
-      position: relative;
+      position: absolute;
+      bottom: 0;
+      right: 0;
     }
-    .dot-grid, canvas {
+    .dot-grid, #vizualisation {
       width: 500px;
       height: 500px;
       position: absolute;
+    }
+    #vizualisation {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    object {
+      margin: 0 10px;
+      cursor: pointer;
     }
     .dot-grid {
       background-image: radial-gradient(rgba(69, 244, 202, 0.6) 5%, transparent 0);
