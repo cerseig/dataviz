@@ -1,3 +1,114 @@
 .topic2 {
   display: none;
+  .content-topic2 {
+    width: calc(100% - 120px);
+    height: calc(100% - 120px);
+    margin: 60px;
+    position: relative;
+    .col-lg-5, .col-lg-7 {
+      padding: 0;
+    }
+    h3 {
+      font-family: $font-neon;
+      font-size: 3em;
+      color: $color-white;
+      font-weight: 200;
+      text-shadow:0 0 10px rgba(69, 244, 202, 0.3), 0 0 20px rgba(69, 244, 202, 0.3), 0 0 30px rgba(69, 244, 202, 0.3), 0 0 40px rgba(69, 244, 202, 0.3), 0 0 50px rgba(69, 244, 202, 0.3);
+      & span {
+        color: $color-mint;
+      }
+    }
+    .result {
+      color: $color-white;
+      width: 100%;
+      height: 200px;
+      display: flex;
+      align-items: center;
+      h4 {
+        font-family: $font-muli-s;
+        font-size: 2em;
+        letter-spacing: 2px;
+      }
+      p {
+        font-family: $font-muli-s;
+        font-size: 0.8em;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        color: $color-mint;
+      }
+    }
+    a {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      font-family: $font-muli-xs;
+      font-weight: 200;
+      font-size: 0.8em;
+      color: rgba(255, 255, 255, 0.6);
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      padding: 15px 50px;
+      border: 2px solid;
+      transition: all 0.5s ease;
+      border-image: linear-gradient(to right, $color-lightblue, $color-mint) 10;
+      cursor: pointer;
+      &:hover {
+        color: rgba(255, 255, 255, 1);
+        font-weight: 500;
+      }
+    }
+    .data {
+      width: 500px;
+      height: 500px;
+      position: absolute;
+      bottom: 0;
+      right: 0;
+    }
+    .dot-grid, #vizualisation3 {
+      width: 500px;
+      height: 500px;
+      position: absolute;
+    }
+    #vizualisation3 {
+      span {
+        margin: 0 10px;
+        cursor: pointer;
+      }
+    }
+    h5 {
+      color: $color-white;
+      position: absolute;
+      text-transform: uppercase;
+      font-family: $font-muli-xs;
+      letter-spacing: 2px;
+      font-size: 0.8em;
+      &.top {
+        display: none;
+        left: 50%;
+        transform: translateX(-50%);
+        top: 0;
+      }
+      &.bottom {
+        display: none;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+      }
+      &.left {
+        left: -35px;
+        top: 50%;
+        transform: rotate(-90deg) translateY(-50%);
+      }
+      &.right {
+        right: -15px;
+        top: 50%;
+        transform: rotate(90deg) translateY(-50%);
+      }
+    }
+
+    .dot-grid {
+      background-image: radial-gradient(rgba(69, 244, 202, 0.6) 5%, transparent 0);
+      background-size: 20px 20px;
+    }
+  }
 }

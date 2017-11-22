@@ -22,6 +22,7 @@ $(document).ready(function() {
   ajaxGet('./assets/data/data.json', (data) => {
     data = JSON.parse(data)
     drawTopic1(data)
+    drawTopic2(data)
   })
 
   function eventListener() {
@@ -104,26 +105,35 @@ $(document).ready(function() {
       $('.title-part1').fadeOut('slow')
       $('#go-topic1-part2').fadeOut('slow')
       $('#vizualisation1').fadeOut('slow')
+      $('#percent').fadeOut('slow')
       setTimeout(() => {
         $('.title-part2').fadeIn('slow')
         $('#go-topic2').fadeIn('slow')
         $('.top').fadeIn('slow')
         $('.bottom').fadeIn('slow')
         $('#vizualisation2').fadeIn('slow')
+        $('#text').fadeIn('slow')
       }, 1000)
-
+    })
+    $('#go-topic2').on('click', () => {
+      $('.topic1').fadeOut('slow')
+      setTimeout(() => {
+        $('.topic2').fadeIn('slow')
+      }, 1000)
     })
 
   }
 
   /* CIRCLES CLASS */
 class Circle {
-  constructor (coeff, color1, color2, name, topic) {
+  constructor (coeff, color1, color2, name, topic, top, left) {
     this.coeff = coeff
     this.color1 = color1
     this.color2 = color2
     this.name = name
     this.topic = topic
+    this.top = top
+    this.left = left
   }
   getElement() {
     var span = document.createElement('span');
@@ -244,118 +254,176 @@ function drawTopic1(data) {
       var people = data.questions[0].responses[i].afraid[j].people;
       var coeff = people * 10;
       var res_text = data.questions[0].responses[i].afraid[j].result;
+      var res_persons = data.questions[0].responses[i].afraid[j].text;
 
       if (data.questions[0].responses[i].name == 'Tous les jours' && data.questions[0].responses[i].afraid[j].name == 'Oui') {
-        var c4 = new Circle(coeff, '#FFE650', '#FF4A69', 't1-p2-c1', 'topic1part2')
+        var c4 = new Circle(coeff, '#45F4CA', '#6446F2', 't1-p2-c1', 'topic1part2')
         c4.getElement()
         var r4 = res_text
+        var rp1 = res_persons
+        $('.t1-p2-c1').css('position', 'absolute').css('top', '90px').css('right', '90px')
         $('.t1-p2-c1')
         .mouseenter(() => {
           $('#result').text(r4);
-          console.log('test hover');
+          $('#text').text(rp1);
+          $('.t1-p2-c1').find('object').css('border', '3px solid #FFF')
         })
         .mouseleave(() => {
           $('#result').text('');
+          $('#text').text('');
+          $('.t1-p2-c1').find('object').css('border', 'none')
         });
       }
       else if (data.questions[0].responses[i].name == 'Tous les jours' && data.questions[0].responses[i].afraid[j].name == 'Un peu') {
-        var c5 = new Circle(coeff, '#FFE650', '#FF4A69', 't1-p2-c2', 'topic1part2')
+        var c5 = new Circle(coeff, '#45F4CA', '#6446F2', 't1-p2-c2', 'topic1part2')
         c5.getElement()
         var r5 = res_text
+        var rp2 = res_persons
+        $('.t1-p2-c2').css('position', 'absolute').css('top', '230px').css('right', '70px')
         $('.t1-p2-c2')
         .mouseenter(() => {
           $('#result').text(r5);
+          $('#text').text(rp2);
+          $('.t1-p2-c2').find('object').css('border', '3px solid #FFF')
         })
         .mouseleave(() => {
           $('#result').text('');
+          $('#text').text('');
+          $('.t1-p2-c2').find('object').css('border', 'none')
         });
       }
       else if (data.questions[0].responses[i].name == 'Tous les jours' && data.questions[0].responses[i].afraid[j].name == 'Non') {
-        var c6 = new Circle(coeff, '#FFE650', '#FF4A69', 't1-p2-c3', 'topic1part2')
+        var c6 = new Circle(coeff, '#45F4CA', '#6446F2', 't1-p2-c3', 'topic1part2')
         c6.getElement()
         var r6 = res_text
+        var rp3 = res_persons
+        $('.t1-p2-c3').css('position', 'absolute').css('bottom', '75px').css('right', '90px')
         $('.t1-p2-c3')
         .mouseenter(() => {
           $('#result').text(r6);
+          $('#text').text(rp3);
+          $('.t1-p2-c3').find('object').css('border', '3px solid #FFF')
         })
         .mouseleave(() => {
           $('#result').text('');
+          $('#text').text('');
+          $('.t1-p2-c3').find('object').css('border', 'none')
         });
       }
-      else if (data.questions[0].responses[i].name == 'De temps en temps' && data.questions[0].responses[i].afraid[j].name == 'Oui') {
-        var c7 = new Circle(coeff, '#45F4CA', '#6446F2', 't1-p2-c4', 'topic1part2')
-        c7.getElement()
-        var r7 = res_text
-        $('.t1-p2-c4')
-        .mouseenter(() => {
-          $('#result').text(r7);
-        })
-        .mouseleave(() => {
-          $('#result').text('');
-        });
-      }
-      else if (data.questions[0].responses[i].name == 'De temps en temps' && data.questions[0].responses[i].afraid[j].name == 'Un peu') {
-        var c8 = new Circle(coeff, '#45F4CA', '#6446F2', 't1-p2-c5', 'topic1part2')
-        c8.getElement()
-        var r8 = res_text
-        $('.t1-p2-c5')
-        .mouseenter(() => {
-          $('#result').text(r8);
-        })
-        .mouseleave(() => {
-          $('#result').text('');
-        });
-      }
-      else if (data.questions[0].responses[i].name == 'De temps en temps' && data.questions[0].responses[i].afraid[j].name == 'Non') {
-        var c9 = new Circle(coeff, '#45F4CA', '#6446F2', 't1-p2-c6', 'topic1part2')
-        c9.getElement()
-        var r9 = res_text
-        $('.t1-p2-c6')
-        .mouseenter(() => {
-          $('#result').text(r9);
-        })
-        .mouseleave(() => {
-          $('#result').text('');
-        });
-      }
-      else if (data.questions[0].responses[i].afraid[j].name == 'Un peu' && data.questions[0].responses[i].name == 'Souvent') {
+      else if (data.questions[0].responses[i].name == 'Souvent' && data.questions[0].responses[i].afraid[j].name == 'Oui') {
         var c10 = new Circle(coeff, '#66BEFF', '#FF4A69', 't1-p2-c7', 'topic1part2')
         c10.getElement()
         var r10 = res_text
+        var rp4 = res_persons
+        $('.t1-p2-c7').css('position', 'absolute').css('top', '80px').css('right', '225px')
         $('.t1-p2-c7')
         .mouseenter(() => {
           $('#result').text(r10);
+          $('#text').text(rp4);
+          $('.t1-p2-c7').find('object').css('border', '3px solid #FFF')
         })
         .mouseleave(() => {
           $('#result').text('');
+          $('#text').text('');
+          $('.t1-p2-c7').find('object').css('border', 'none')
         });
       }
-      else if (data.questions[0].responses[i].afraid[j].name == 'Oui' && data.questions[0].responses[i].name == 'Souvent') {
+      else if (data.questions[0].responses[i].name == 'Souvent' && data.questions[0].responses[i].afraid[j].name == 'Un peu') {
         var c11 = new Circle(coeff, '#66BEFF', '#FF4A69', 't1-p2-c8', 'topic1part2')
         c11.getElement()
         var r11 = res_text
+        var rp5 = res_persons
+        $('.t1-p2-c8').css('position', 'absolute').css('top', '200px').css('right', '185px')
         $('.t1-p2-c8')
         .mouseenter(() => {
           $('#result').text(r11);
+          $('#text').text(rp5);
+          $('.t1-p2-c8').find('object').css('border', '3px solid #FFF')
         })
         .mouseleave(() => {
           $('#result').text('');
+          $('#text').text('');
+          $('.t1-p2-c8').find('object').css('border', 'none')
         });
       }
-      else if (data.questions[0].responses[i].afraid[j].name == 'Non' && data.questions[0].responses[i].name == 'Souvent') {
+      else if (data.questions[0].responses[i].name == 'Souvent' && data.questions[0].responses[i].afraid[j].name == 'Non') {
         var c12 = new Circle(coeff, '#66BEFF', '#FF4A69', 't1-p2-c9', 'topic1part2')
         c12.getElement()
         var r12 = res_text
+        var rp6 = res_persons
+        $('.t1-p2-c9').css('position', 'absolute').css('bottom', '75px').css('right', '230px')
         $('.t1-p2-c9')
         .mouseenter(() => {
           $('#result').text(r12);
+          $('#text').text(rp6);
+          $('.t1-p2-c9').find('object').css('border', '3px solid #FFF')
         })
         .mouseleave(() => {
           $('#result').text('');
+          $('#text').text('');
+          $('.t1-p2-c9').find('object').css('border', 'none')
+        });
+      }
+      else if (data.questions[0].responses[i].name == 'De temps en temps' && data.questions[0].responses[i].afraid[j].name == 'Oui') {
+        var c7 = new Circle(coeff, '#FFE650', '#FF4A69', 't1-p2-c4', 'topic1part2')
+        c7.getElement()
+        var r7 = res_text
+        var rp7 = res_persons
+        $('.t1-p2-c4').css('position', 'absolute').css('top', '90px').css('left', '90px')
+        $('.t1-p2-c4')
+        .mouseenter(() => {
+          $('#result').text(r7);
+          $('#text').text(rp7);
+          $('.t1-p2-c4').find('object').css('border', '3px solid #FFF')
+        })
+        .mouseleave(() => {
+          $('#result').text('');
+          $('#text').text('');
+          $('.t1-p2-c4').find('object').css('border', 'none')
+        });
+      }
+      else if (data.questions[0].responses[i].name == 'De temps en temps' && data.questions[0].responses[i].afraid[j].name == 'Un peu') {
+        var c8 = new Circle(coeff, '#FFE650', '#FF4A69', 't1-p2-c5', 'topic1part2')
+        c8.getElement()
+        var r8 = res_text
+        var rp8 = res_persons
+        $('.t1-p2-c5').css('position', 'absolute').css('top', '240px').css('left', '80px')
+        $('.t1-p2-c5')
+        .mouseenter(() => {
+          $('#result').text(r8);
+          $('#text').text(rp8);
+          $('.t1-p2-c5').find('object').css('border', '3px solid #FFF')
+        })
+        .mouseleave(() => {
+          $('#result').text('');
+          $('#text').text('');
+          $('.t1-p2-c5').find('object').css('border', 'none')
+        });
+      }
+      else if (data.questions[0].responses[i].name == 'De temps en temps' && data.questions[0].responses[i].afraid[j].name == 'Non') {
+        var c9 = new Circle(coeff, '#FFE650', '#FF4A69', 't1-p2-c6', 'topic1part2')
+        c9.getElement()
+        var r9 = res_text
+        var rp9 = res_persons
+        $('.t1-p2-c6').css('position', 'absolute').css('bottom', '50px').css('left', '66px')
+        $('.t1-p2-c6')
+        .mouseenter(() => {
+          $('#result').text(r9);
+          $('#text').text(rp9);
+          $('.t1-p2-c6').find('object').css('border', '3px solid #FFF')
+        })
+        .mouseleave(() => {
+          $('#result').text('');
+          $('#text').text('');
+          $('.t1-p2-c6').find('object').css('border', 'none')
         });
       }
     }
   }
+}
+
+function drawTopic2(data) {
+
 }
 
 eventListener()
