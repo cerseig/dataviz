@@ -1,6 +1,18 @@
 {
   "title": "Une lueur pour les BDDI",
   "sample": 38,
+  "conclusion": [
+    {
+      "name": "optimist",
+      "percent": "68",
+      "result": "sont optimistes"
+    },
+    {
+      "name": "pessimist",
+      "percent": "32",
+      "result": "sont pessimistes"
+    }
+  ],
   "questions": [
     {
       "title": "Est-ce que vous pensez souvent à votre futur ?",
@@ -124,27 +136,107 @@
       ]
     },
     {
+      "title": "Et le soir, vous sortirez ?",
+      "responses": [
+        {
+          "name": "Le plus possible",
+          "people": "8",
+          "percent": "21",
+          "result": "pense sortir le plus possible avant la fin de leur vie"
+        },
+        {
+          "name": "Plus que maintenant",
+          "people": "6",
+          "percent": "16",
+          "result": "pense sortir plus que maintenant"
+        },
+        {
+          "name": "Ni plus ni moins",
+          "people": "19",
+          "percent": "50",
+          "result": "pense sortir autant qu'aujourd'hui"
+        },
+        {
+          "name": "Moins",
+          "people": "4",
+          "percent": "11",
+          "result": "pense sortir moins qu'aujourd'hui"
+        },
+        {
+          "name": "Jamais",
+          "people": "1",
+          "percent": "2",
+          "result": "pense ne jamais sortir"
+        }
+      ]
+    },
+    {
+      "title": "Dans quel type d’entreprise pensez-vous être dans 10 ans ?",
+      "responses": [
+        {
+          "name": "Dans une start-up",
+          "people": "5",
+          "percent": "13",
+          "result": "Des étudiants travailleront dans une start-up"
+        },
+        {
+          "name": "J’aurai ma propre boîte",
+          "people": "8",
+          "percent": "21",
+          "result": "Des étudiants auront leur propre boîte"
+        },
+        {
+          "name": "Dans une agence",
+          "people": "",
+          "percent": "26",
+          "result": "Travailleront en agence"
+        },
+        {
+          "name": "J’aurai tout plaqué pour faire le tour du monde",
+          "people": "8",
+          "percent": "22",
+          "result": "Des étudiants auront tout plaqué pour faire le tour du monde"
+        },
+        {
+          "name": "En freelance",
+          "people": "6",
+          "percent": "16",
+          "result": "Des étudiants seront en freelance"
+        },
+        {
+          "name": "La vie me dira",
+          "people": "1",
+          "percent": "2",
+          "result": "Et 1 étudiant où la vie le menera où elle lui dira"
+        }
+      ]
+    },
+    {
       "title": "Dans 10 ans, aurez vous accompli tout ce que vous pensiez réaliser ?",
       "responses": [
         {
-          "name": "Absolument",
-          "people": "2",
-          "percent": "5,3"
-        },
-        {
           "name": "Pas du tout",
           "people": "9",
-          "percent": "23,7"
+          "percent": "23,7",
+          "result": "pensent qu'ils n'auront pas du tout réalisé leurs rêves."
         },
         {
           "name": "Il restera du chemin à faire",
           "people": "25",
-          "percent": "65,8"
+          "percent": "65,8",
+          "result": "pensent qu'ils leur restera du chemin à faire."
         },
         {
           "name": "J’aurai quasiment fait tout ce dont je rêve aujourd’hui",
           "people": "2",
-          "percent": "5,3"
+          "percent": "5,3",
+          "result": "pensent qu'ils auront fait tout ce dont ils rêvent aujourd'hui."
+        },
+        {
+          "name": "Absolument",
+          "people": "2",
+          "percent": "5,3",
+          "result": "pensent qu'ils auront accompli tout ce dont ils pensaient réaliser."
         }
       ]
     },
@@ -194,126 +286,37 @@
       ]
     },
     {
-      "title": "Dans 10 ans, aurez vous accompli votre souhait le plus cher ?",
-      "responses": [
-        {
-          "name": "Oui",
-          "people": "5",
-          "percent": "13,2"
-        },
-        {
-          "name": "Non",
-          "people": "1",
-          "percent": "2,6"
-        },
-        {
-          "name": "En partie",
-          "people": "5",
-          "percent": "13,2"
-        },
-        {
-          "name": "Je n'ai pas un souhait en particulier",
-          "people": "27",
-          "percent": "71,1"
-        }
-      ]
-    },
-    {
-      "title": "Dans quel type d’entreprise pensez-vous être dans 10 ans ?",
-      "responses": [
-        {
-          "name": "Dans une start-up",
-          "people": "5",
-          "percent": "13,2"
-        },
-        {
-          "name": "Dans une agence",
-          "people": "",
-          "percent": "26,3"
-        },
-        {
-          "name": "J’aurai ma propre boîte",
-          "people": "8",
-          "percent": "21,1"
-        },{
-          "name": "En freelance",
-          "people": "6",
-          "percent": "15,8"
-        },
-        {
-          "name": "J’aurai tout plaqué pour faire le tour du monde",
-          "people": "8",
-          "percent": "21,1"
-        },
-        {
-          "name": "La vie me dira",
-          "people": "1",
-          "percent": "2,6"
-        }
-      ]
-    },
-    {
-      "title": "Et le soir, vous sortirez ?",
-      "responses": [
-        {
-          "name": "Le plus possible, jusqu'à la fin !",
-          "people": "8",
-          "percent": "21,1"
-        },
-        {
-          "name": "Plus que maintenant j’espère",
-          "people": "6",
-          "percent": "15,8"
-        },
-        {
-          "name": "Ni plus ni moins que maintenant",
-          "people": "19",
-          "percent": "50"
-        },
-        {
-          "name": "Moins que maintenant mais je sortirai quand même",
-          "people": "4",
-          "percent": "10,5"
-        },
-        {
-          "name": "Jamais",
-          "people": "1",
-          "percent": "2,6"
-        }
-      ]
-    },
-    {
       "title": "Dans 10 ans, où est-ce que vous vivrez ?",
       "responses": [
         {
-          "name": "Dans le même coin",
-          "people": "7",
-          "percent": "18,4"
+          "name": "A l'étranger",
+          "people": "1",
+          "percent": "2,6",
+          "result": "pensent partir à l'étranger."
         },
         {
-          "name": "Pas dans la même ville mais dans le même pays",
-          "people": "9",
-          "percent": "23,7"
+          "name": "Dans le même coin",
+          "people": "7",
+          "percent": "18,4",
+          "result": "pensent rester dans le coin."
+        },
+        {
+          "name": "Dans le même pays",
+          "people": "10",
+          "percent": "26,3",
+          "result": "pensent rester en France."
         },
         {
           "name": "À l’autre bout de la terre",
           "people": "7",
-          "percent": "18,4"
+          "percent": "18,4",
+          "result": "pensent partir à l'autre bout de la Terre."
         },
         {
           "name": "Je ne sais pas",
           "people": "13",
-          "percent": "34,2"
-        },
-        {
-          "name": "A la montagne",
-          "people": "1",
-          "percent": "2,6"
-        },
-        {
-          "name": "A l'étranger",
-          "people": "1",
-          "percent": "2,6"
+          "percent": "34,2",
+          "result": "ne savent pas où ils seront."
         }
       ]
     },
@@ -322,23 +325,21 @@
       "responses": [
         {
           "name": "Oui",
-          "people": "5",
-          "percent": "13,2"
-        },
-        {
-          "name": "Non",
-          "people": "1",
-          "percent": "2,6"
-        },
-        {
-          "name": "Je l'espère",
-          "people": "21",
-          "percent": "55,3"
+          "people": "26",
+          "percent": "69",
+          "result": "soit 26 étudiants, pensent ou espèrent que leur vie sera meilleure."
         },
         {
           "name": "Ni meilleure ni pire",
           "people": "11",
-          "percent": "28,9"
+          "percent": "29",
+          "result": "soit 11 étudiants, pensent que leur vie ne sera ni meilleure ni pire."
+        },
+        {
+          "name": "Non",
+          "people": "1",
+          "percent": "2",
+          "result": "soit 1 personne, pense que sa vie ne sera pas meilleure"
         }
       ]
     }

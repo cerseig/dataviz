@@ -70,13 +70,13 @@
                 <div class="content-topic1">
                   <div class="row">
                     <div class="col-lg-5">
-                      <h3 class="title-part1"><span>Les BDDI</span><br> pensent-ils<br> à leur futur ?</h3>
-                      <h3 class="title-part2"><span>Les BDDI</span><br> ont-ils peur<br> de leur futur ?</h3>
+                      <h3 class="t1-title-part1"><span>Les BDDI</span><br> pensent-ils<br> à leur futur ?</h3>
+                      <h3 class="t1-title-part2"><span>Les BDDI</span><br> ont-ils peur<br> de leur futur ?</h3>
                       <div class="result">
                         <div>
-                          <h4 id="percent"></h4>
-                          <p id="result"></p>
-                          <p id="text"></p>
+                          <h4 id="percent-t1"></h4>
+                          <p id="result-t1"></p>
+                          <p id="text-t1"></p>
 
                         </div>
                       </div>
@@ -129,8 +129,8 @@
                       <h3><span>Dans 10 ans,</span><br> sortiront-ils<br> encore ?</h3>
                       <div class="result">
                         <div>
-                          <h4 id="percent"></h4>
-                          <p id="result"></p>
+                          <h4 id="percent-t2"></h4>
+                          <p id="result-t2"></p>
                         </div>
                       </div>
                       <div class="btn-action">
@@ -140,7 +140,9 @@
                     <div class="col-lg-7">
                       <div class="data">
                         <div class="dot-grid"></div>
-                        <div id="vizualisation3"></div>
+                        <div id="vizualisation3">
+
+                        </div>
                         <h5 class="top">Le plus possible</h5>
                         <h5 class="bottom">Jamais</h5>
                         <h5 class="left">Aujourd'hui</h5>
@@ -158,9 +160,25 @@
           <div class="container-fluid">
             <div class="row">
               <div class="col-12">
-                <div class="data">
-                  <canvas id="topic1" width="400" height="400"></canvas>
-                  <div class="dot-grid"></div>
+                <div class="content-topic3">
+                  <div class="row">
+                    <div class="col-lg-12">
+                      <h3><span>Dans 10 ans,</span><br> où en seront-ils<br> professionnellement ?</h3>
+                      <div class="data">
+                        <div class="dot-grid"></div>
+                        <div id="vizualisation4"></div>
+                      </div>
+                      <div class="result">
+                        <div>
+                          <h4 id="percent-t2"></h4>
+                          <p id="result-t2"></p>
+                        </div>
+                      </div>
+                      <div class="btn-action">
+                        <a id="go-topic4">Suivant</a>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
@@ -171,9 +189,60 @@
           <div class="container-fluid">
             <div class="row">
               <div class="col-12">
-                <div class="data">
-                  <canvas id="topic1" width="400" height="400"></canvas>
-                  <div class="dot-grid"></div>
+                <div class="content-t4">
+                  <div class="row">
+                    <div class="col-lg-5">
+                      <h3 class="t4-title-part1"><span>Dans 10 ans,</span><br>auront-ils réalisé<br>leurs reves ?</h3>
+                      <h3 class="t4-title-part2">Mais qu'est ce que<br><span>les BDDI</span> entendent<br>par "reves" ?</h3>
+                      <div class="result">
+                        <div>
+                          <h4 id="percent-t4"></h4>
+                          <p id="result-t4"></p>
+                          <p id="text-t4"></p>
+
+                        </div>
+                      </div>
+                      <div class="legend">
+                        <ul>
+                          <li>
+                            <div class="t4-c1"></div>
+                            <p>Pas du tout</p>
+                          </li>
+                          <li>
+                            <div class="t4-c2"></div>
+                            <p>Il restera du chemin à faire</p>
+                          </li>
+                          <li>
+                            <div class="t4-c3"></div>
+                            <p>J'aurais quasiment fait tout ce dont j'ai rêvé</p>
+                          </li>
+                          <li>
+                            <div class="t4-c4"></div>
+                            <p>Absolument</p>
+                          </li>
+                        </ul>
+                      </div>
+                      <div class="btn-action">
+                        <a id="go-topic4-part2">Qu'entendent-ils par "rêves" ?</a>
+                        <a id="go-topic5">Suivant</a>
+                      </div>
+                    </div>
+                    <div class="col-lg-7">
+                      <div class="data">
+                        <div class="dot-grid"></div>
+                        <div id="vizualisation5"></div>
+                        <div id="vizualisation6"></div>
+                        <h5 class="left">Pas du tout</h5>
+                        <h5 class="right">Absolument</h5>
+                        <div class="data-legend">
+                          <h5>Famille</h5>
+                          <h5>Carrière</h5>
+                          <h5>Matériel</h5>
+                          <h5>Epanouissement</h5>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
@@ -184,9 +253,54 @@
           <div class="container-fluid">
             <div class="row">
               <div class="col-12">
-                <div class="data">
-                  <canvas id="topic1" width="400" height="400"></canvas>
-                  <div class="dot-grid"></div>
+                <div class="content-t5">
+                  <div class="row">
+                    <div class="col-lg-5">
+                      <h3><span>Dans 10 ans,</span><br>où habiteront<br>les bddi ?</h3>
+                      <div class="result">
+                        <div>
+                          <h4 id="percent-t5"></h4>
+                          <p id="result-t5"></p>
+                        </div>
+                      </div>
+                      <div class="legend">
+                        <ul>
+                          <li>
+                            <div class="t5-t1"></div>
+                            <p>A l'étranger</p>
+                          </li>
+                          <li>
+                            <div class="t5-t2"></div>
+                            <p>Dans le même coin</p>
+                          </li>
+                          <li>
+                            <div class="t5-t3"></div>
+                            <p>Dans le même pays</p>
+                          </li>
+                          <li>
+                            <div class="t5-t4"></div>
+                            <p>A l'autre bout de la terre</p>
+                          </li>
+                          <li>
+                            <div class="t5-c1"></div>
+                            <p>Je ne sais pas</p>
+                          </li>
+                        </ul>
+                      </div>
+                      <div class="btn-action">
+                        <a id="go-topic6">Suivant</a>
+                      </div>
+                    </div>
+                    <div class="col-lg-7">
+                      <div class="data">
+                        <div class="dot-grid"></div>
+                        <div id="vizualisation7">
+                          <div class="kernel"></div>
+                        </div>
+                        <h5 class="top">Loin</h5>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
@@ -197,9 +311,32 @@
           <div class="container-fluid">
             <div class="row">
               <div class="col-12">
-                <div class="data">
-                  <canvas id="topic1" width="400" height="400"></canvas>
-                  <div class="dot-grid"></div>
+                <div class="content-t6">
+                  <div class="row">
+                    <div class="col-lg-5">
+                      <h3><span>Dans 10 ans,</span><br>leur vie sera-t-elle<br>meilleure ?</h3>
+                      <div class="result">
+                        <div>
+                          <h4 id="percent-t6"></h4>
+                          <p id="result-t6"></p>
+                        </div>
+                      </div>
+                      <div class="btn-action">
+                        <a id="go-final">Suivant</a>
+                      </div>
+                    </div>
+                    <div class="col-lg-7">
+                      <div class="data">
+                        <div class="dot-grid"></div>
+                        <div id="vizualisation8">
+                        </div>
+                        <h5 class="top">Meilleure</h5>
+                        <h5 class="bottom">Pire</h5>
+                        <h5 class="left">Aujourd'hui</h5>
+                        <h5 class="right">+10 ans</h5>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
@@ -210,9 +347,29 @@
           <div class="container-fluid">
             <div class="row">
               <div class="col-12">
-                <div class="data">
-                  <canvas id="topic1" width="400" height="400"></canvas>
-                  <div class="dot-grid"></div>
+                <div class="content-final">
+                  <div class="row">
+                    <div class="col-lg-12">
+                      <h3><span>Les étudiants en BDDI</span><br>ont-ils de l'espoir ?</h3>
+                      <div class="data">
+                        <div class="dot-grid"></div>
+                        <div id="vizualisation9">
+                        </div>
+                        <div class="result-data">
+                          <div class="result">
+                            <div class="r1">
+                              <span class="final-p1"></span>
+                              <p class="final-r1"></p>
+                            </div>
+                            <div class="r2">
+                              <span class="final-p2"></span>
+                              <p class="final-r2"></p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
@@ -220,11 +377,6 @@
         </section>
 
       </main>
-
-
-
-      <div class="test" id="test">
-      </div>
 
       <!-- LIBRARIES -->
       <script src="http://code.jquery.com/jquery-1.9.0b1.js"></script>

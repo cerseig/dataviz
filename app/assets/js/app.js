@@ -20,9 +20,14 @@ $(document).ready(function() {
   }
 
   ajaxGet('./assets/data/data.json', (data) => {
-    data = JSON.parse(data)
-    drawTopic1(data)
-    drawTopic2(data)
+    data = JSON.parse(data);
+    drawFinal(data);
+    drawTopic6(data);
+    drawTopic5(data);
+    drawTopic4(data);
+    drawTopic3(data);
+    drawTopic2(data);
+    drawTopic1(data);
   })
 
   function eventListener() {
@@ -102,12 +107,12 @@ $(document).ready(function() {
     })
 
     $('#go-topic1-part2').on('click', () => {
-      $('.title-part1').fadeOut('slow')
+      $('.t1-title-part1').fadeOut('slow')
       $('#go-topic1-part2').fadeOut('slow')
       $('#vizualisation1').fadeOut('slow')
       $('#percent').fadeOut('slow')
       setTimeout(() => {
-        $('.title-part2').fadeIn('slow')
+        $('.t1-title-part2').fadeIn('slow')
         $('#go-topic2').fadeIn('slow')
         $('.top').fadeIn('slow')
         $('.bottom').fadeIn('slow')
@@ -121,9 +126,118 @@ $(document).ready(function() {
         $('.topic2').fadeIn('slow')
       }, 1000)
     })
+    $('#go-topic3').on('click', () => {
+      $('.topic2').fadeOut('slow')
+      setTimeout(() => {
+        $('.topic3').fadeIn('slow')
+      }, 1000)
+    })
+    $('#go-topic4').on('click', () => {
+      $('.topic3').fadeOut('slow')
+      setTimeout(() => {
+        $('.topic4').fadeIn('slow')
+      }, 1000)
+    })
+    $('#go-topic4-part2').on('click', () => {
+      $('.t4-title-part1').fadeOut('slow')
+      $('#go-topic4-part2').fadeOut('slow')
+      $('#vizualisation5').fadeOut('slow')
+      $('#percent-t4').fadeOut('slow')
+      $('.left').fadeOut('slow')
+      $('.right').fadeOut('slow')
+      setTimeout(() => {
+        $('.t4-title-part2').fadeIn('slow')
+        $('#go-topic5').fadeIn('slow')
+        $('#vizualisation6').fadeIn('slow')
+        $('#text-t4').fadeIn('slow')
+        $('.data-legend').fadeIn('slow')
+      }, 1000)
+    })
+    $('#go-topic5').on('click', () => {
+      $('.topic4').fadeOut('slow')
+      setTimeout(() => {
+        $('.topic5').fadeIn('slow')
+      }, 1000)
+    })
+    $('#go-topic6').on('click', () => {
+      $('.topic5').fadeOut('slow')
+      setTimeout(() => {
+        $('.topic6').fadeIn('slow')
+      }, 1000)
+    })
+    $('#go-final').on('click', () => {
+      $('.topic6').fadeOut('slow')
+      setTimeout(() => {
+        $('.final').fadeIn('slow')
+      }, 1000)
+    })
 
   }
 
+class Trait {
+  constructor (coeff, color, name, topic) {
+    this.coeff = coeff
+    this.color = color
+    this.name = name
+    this.topic = topic
+  }
+  getElement() {
+    var trait = document.createElement('div')
+    trait.setAttribute('class', 'trait '+this.name)
+    trait.setAttribute('style', 'background:'+this.color+'; width:'+this.coeff+'px')
+    if (this.topic == "topic5") {
+      document.getElementById("vizualisation7").appendChild(trait);
+    }
+  }
+}
+/* BAR CLASS */
+class Bar {
+  constructor (percent, color1, color2, name, topic) {
+    this.percent = percent
+    this.color1 = color1
+    this.color2 = color2
+    this.name = name
+    this.topic = topic
+  }
+  getElement() {
+    var content = document.createElement('div')
+    var bar = document.createElement('div')
+    var span = document.createElement('span')
+    var result = document.createElement('p')
+    content.setAttribute('class', 'parent '+this.name)
+    bar.setAttribute('class', 'bar')
+    bar.setAttribute('style', 'width:'+this.percent+'%; background: linear-gradient(to bottom, '+this.color1+' 0%,  '+this.color2+' 100%)')
+    if (this.topic == "topic3") {
+      document.getElementById("vizualisation4").appendChild(content).appendChild(bar);
+      document.getElementById("vizualisation4").appendChild(content).appendChild(span);
+      document.getElementById("vizualisation4").appendChild(content).appendChild(result);
+    }
+  }
+}
+/* PROGRESS CLASS */
+class Progress {
+  constructor (percent, color1, color2, name, topic) {
+    this.percent = percent
+    this.color1 = color1
+    this.color2 = color2
+    this.name = name
+    this.topic = topic
+  }
+  getElement() {
+    var bar = document.createElement('div')
+    bar.setAttribute('class', 'bar '+this.name)
+    bar.setAttribute('style', 'background:linear-gradient(226.24deg,'+this.color1+' 0%,'+this.color2+' 100%)')
+    var progress_bar = document.createElement('div')
+    progress_bar.setAttribute('class', 'progress')
+    progress_bar.setAttribute('style', 'width:'+this.percent+'%')
+    if (this.topic == "topic2") {
+      document.getElementById("vizualisation3").appendChild(bar).appendChild(progress_bar);
+    }
+    if (this.topic == "topic6") {
+      document.getElementById("vizualisation8").appendChild(bar).appendChild(progress_bar);
+    }
+  }
+}
   /* CIRCLES CLASS */
 class Circle {
   constructor (coeff, color1, color2, name, topic, top, left) {
@@ -141,30 +255,21 @@ class Circle {
     object.setAttribute('data', './assets/js/circle_gradient.svg');
     object.setAttribute('type', 'image/svg+xml');
     object.setAttribute('width', this.coeff)
-    span.setAttribute('class', this.name)
+    span.setAttribute('class', 'hover '+this.name)
     if (this.topic == "topic1part1") {
       document.getElementById("vizualisation1").appendChild(span).appendChild(object);
     }
     else if (this.topic == "topic1part2") {
       document.getElementById("vizualisation2").appendChild(span).appendChild(object);
     }
-    else if (this.topic == "topic2") {
-      document.getElementById("vizualisation3").appendChild(span).appendChild(object);
-    }
-    else if (this.topic == "topic3") {
-      document.getElementById("vizualisation4").appendChild(span).appendChild(object);
-    }
-    else if (this.topic == "topic4") {
+    else if (this.topic == "topic4part1") {
       document.getElementById("vizualisation5").appendChild(span).appendChild(object);
     }
-    else if (this.topic == "topic5") {
+    else if (this.topic == "topic4part2") {
       document.getElementById("vizualisation6").appendChild(span).appendChild(object);
     }
-    else if (this.topic == "topic6") {
-      document.getElementById("vizualisation7").appendChild(span).appendChild(object);
-    }
     else if (this.topic == "final") {
-      document.getElementById("vizualisation8").appendChild(span).appendChild(object);
+      document.getElementById("vizualisation9").appendChild(span).appendChild(object);
     }
     object.addEventListener('load', () => {
       var obj = object.contentDocument;
@@ -188,9 +293,6 @@ function drawTopic1(data) {
       var percent = data.questions[0].responses[j].percent
       var res_text = data.questions[0].responses[j].result
 
-      var p = percent + '%'
-      var r = res_text
-
       if(data.questions[0].responses[j].name == 'Tous les jours') {
 
         var c1 = new Circle(coeff, '#45F4CA', '#6446F2', 't1-p1-c1', 'topic1part1')
@@ -200,12 +302,12 @@ function drawTopic1(data) {
 
         $('.t1-p1-c1')
         .mouseenter(() => {
-          $('#percent').text(p1);
-          $('#result').text(r1);
+          $('#percent-t1').text(p1);
+          $('#result-t1').text(r1);
         })
         .mouseleave(() => {
-          $('#percent').text('');
-          $('#result').text('');
+          $('#percent-t1').text('');
+          $('#result-t1').text('');
         });
 
       } else if (data.questions[0].responses[j].name == 'Souvent') {
@@ -216,12 +318,12 @@ function drawTopic1(data) {
         var r2 = res_text
         $('.t1-p1-c2')
         .mouseenter(() => {
-          $('#percent').text(p2);
-          $('#result').text(r2);
+          $('#percent-t1').text(p2);
+          $('#result-t1').text(r2);
         })
         .mouseleave(() => {
-          $('#percent').text('');
-          $('#result').text('');
+          $('#percent-t1').text('');
+          $('#result-t1').text('');
         });
 
       } else if (data.questions[0].responses[j].name == 'De temps en temps') {
@@ -232,12 +334,12 @@ function drawTopic1(data) {
         var r3 = res_text
         $('.t1-p1-c3')
         .mouseenter(() => {
-          $('#percent').text(p3);
-          $('#result').text(r3);
+          $('#percent-t1').text(p3);
+          $('#result-t1').text(r3);
         })
         .mouseleave(() => {
-          $('#percent').text('');
-          $('#result').text('');
+          $('#percent-t1').text('');
+          $('#result-t1').text('');
         });
       }
     }
@@ -264,14 +366,15 @@ function drawTopic1(data) {
         $('.t1-p2-c1').css('position', 'absolute').css('top', '90px').css('right', '90px')
         $('.t1-p2-c1')
         .mouseenter(() => {
-          $('#result').text(r4);
-          $('#text').text(rp1);
-          $('.t1-p2-c1').find('object').css('border', '3px solid #FFF')
+          $('#result-t1').text(r4);
+          $('#text-t1').text(rp1);
+          $('.t1-p2-c1').find('object').css('box-shadow', '1px 1px 30px 0px #ffffff')
+          // box-shadow: 1px 1px 30px 0px #ffffff;
         })
         .mouseleave(() => {
-          $('#result').text('');
-          $('#text').text('');
-          $('.t1-p2-c1').find('object').css('border', 'none')
+          $('#result-t1').text('');
+          $('#text-t1').text('');
+          $('.t1-p2-c1').find('object').css('box-shadow', 'none')
         });
       }
       else if (data.questions[0].responses[i].name == 'Tous les jours' && data.questions[0].responses[i].afraid[j].name == 'Un peu') {
@@ -282,14 +385,14 @@ function drawTopic1(data) {
         $('.t1-p2-c2').css('position', 'absolute').css('top', '230px').css('right', '70px')
         $('.t1-p2-c2')
         .mouseenter(() => {
-          $('#result').text(r5);
-          $('#text').text(rp2);
-          $('.t1-p2-c2').find('object').css('border', '3px solid #FFF')
+          $('#result-t1').text(r5);
+          $('#text-t1').text(rp2);
+          $('.t1-p2-c2').find('object').css('box-shadow', '1px 1px 30px 0px #ffffff')
         })
         .mouseleave(() => {
-          $('#result').text('');
-          $('#text').text('');
-          $('.t1-p2-c2').find('object').css('border', 'none')
+          $('#result-t1').text('');
+          $('#text-t1').text('');
+          $('.t1-p2-c2').find('object').css('box-shadow', 'none')
         });
       }
       else if (data.questions[0].responses[i].name == 'Tous les jours' && data.questions[0].responses[i].afraid[j].name == 'Non') {
@@ -300,14 +403,14 @@ function drawTopic1(data) {
         $('.t1-p2-c3').css('position', 'absolute').css('bottom', '75px').css('right', '90px')
         $('.t1-p2-c3')
         .mouseenter(() => {
-          $('#result').text(r6);
-          $('#text').text(rp3);
-          $('.t1-p2-c3').find('object').css('border', '3px solid #FFF')
+          $('#result-t1').text(r6);
+          $('#text-t1').text(rp3);
+          $('.t1-p2-c3').find('object').css('box-shadow', '1px 1px 30px 0px #ffffff')
         })
         .mouseleave(() => {
-          $('#result').text('');
-          $('#text').text('');
-          $('.t1-p2-c3').find('object').css('border', 'none')
+          $('#result-t1').text('');
+          $('#text-t1').text('');
+          $('.t1-p2-c3').find('object').css('box-shadow', 'none')
         });
       }
       else if (data.questions[0].responses[i].name == 'Souvent' && data.questions[0].responses[i].afraid[j].name == 'Oui') {
@@ -318,14 +421,14 @@ function drawTopic1(data) {
         $('.t1-p2-c7').css('position', 'absolute').css('top', '80px').css('right', '225px')
         $('.t1-p2-c7')
         .mouseenter(() => {
-          $('#result').text(r10);
-          $('#text').text(rp4);
-          $('.t1-p2-c7').find('object').css('border', '3px solid #FFF')
+          $('#result-t1').text(r10);
+          $('#text-t1').text(rp4);
+          $('.t1-p2-c7').find('object').css('box-shadow', '1px 1px 30px 0px #ffffff')
         })
         .mouseleave(() => {
-          $('#result').text('');
-          $('#text').text('');
-          $('.t1-p2-c7').find('object').css('border', 'none')
+          $('#result-t1').text('');
+          $('#text-t1').text('');
+          $('.t1-p2-c7').find('object').css('box-shadow', 'none')
         });
       }
       else if (data.questions[0].responses[i].name == 'Souvent' && data.questions[0].responses[i].afraid[j].name == 'Un peu') {
@@ -336,14 +439,14 @@ function drawTopic1(data) {
         $('.t1-p2-c8').css('position', 'absolute').css('top', '200px').css('right', '185px')
         $('.t1-p2-c8')
         .mouseenter(() => {
-          $('#result').text(r11);
-          $('#text').text(rp5);
-          $('.t1-p2-c8').find('object').css('border', '3px solid #FFF')
+          $('#result-t1').text(r11);
+          $('#text-t1').text(rp5);
+          $('.t1-p2-c8').find('object').css('box-shadow', '1px 1px 30px 0px #ffffff')
         })
         .mouseleave(() => {
-          $('#result').text('');
-          $('#text').text('');
-          $('.t1-p2-c8').find('object').css('border', 'none')
+          $('#result-t1').text('');
+          $('#text-t1').text('');
+          $('.t1-p2-c8').find('object').css('box-shadow', 'none')
         });
       }
       else if (data.questions[0].responses[i].name == 'Souvent' && data.questions[0].responses[i].afraid[j].name == 'Non') {
@@ -354,14 +457,14 @@ function drawTopic1(data) {
         $('.t1-p2-c9').css('position', 'absolute').css('bottom', '75px').css('right', '230px')
         $('.t1-p2-c9')
         .mouseenter(() => {
-          $('#result').text(r12);
-          $('#text').text(rp6);
-          $('.t1-p2-c9').find('object').css('border', '3px solid #FFF')
+          $('#result-t1').text(r12);
+          $('#text-t1').text(rp6);
+          $('.t1-p2-c9').find('object').css('box-shadow', '1px 1px 30px 0px #ffffff')
         })
         .mouseleave(() => {
-          $('#result').text('');
-          $('#text').text('');
-          $('.t1-p2-c9').find('object').css('border', 'none')
+          $('#result-t1').text('');
+          $('#text-t1').text('');
+          $('.t1-p2-c9').find('object').css('box-shadow', 'none')
         });
       }
       else if (data.questions[0].responses[i].name == 'De temps en temps' && data.questions[0].responses[i].afraid[j].name == 'Oui') {
@@ -372,14 +475,14 @@ function drawTopic1(data) {
         $('.t1-p2-c4').css('position', 'absolute').css('top', '90px').css('left', '90px')
         $('.t1-p2-c4')
         .mouseenter(() => {
-          $('#result').text(r7);
-          $('#text').text(rp7);
-          $('.t1-p2-c4').find('object').css('border', '3px solid #FFF')
+          $('#result-t1').text(r7);
+          $('#text-t1').text(rp7);
+          $('.t1-p2-c4').find('object').css('box-shadow', '1px 1px 30px 0px #ffffff')
         })
         .mouseleave(() => {
-          $('#result').text('');
-          $('#text').text('');
-          $('.t1-p2-c4').find('object').css('border', 'none')
+          $('#result-t1').text('');
+          $('#text-t1').text('');
+          $('.t1-p2-c4').find('object').css('box-shadow', 'none')
         });
       }
       else if (data.questions[0].responses[i].name == 'De temps en temps' && data.questions[0].responses[i].afraid[j].name == 'Un peu') {
@@ -390,14 +493,14 @@ function drawTopic1(data) {
         $('.t1-p2-c5').css('position', 'absolute').css('top', '240px').css('left', '80px')
         $('.t1-p2-c5')
         .mouseenter(() => {
-          $('#result').text(r8);
-          $('#text').text(rp8);
-          $('.t1-p2-c5').find('object').css('border', '3px solid #FFF')
+          $('#result-t1').text(r8);
+          $('#text-t1').text(rp8);
+          $('.t1-p2-c5').find('object').css('box-shadow', '1px 1px 30px 0px #ffffff')
         })
         .mouseleave(() => {
-          $('#result').text('');
-          $('#text').text('');
-          $('.t1-p2-c5').find('object').css('border', 'none')
+          $('#result-t1').text('');
+          $('#text-t1').text('');
+          $('.t1-p2-c5').find('object').css('box-shadow', 'none')
         });
       }
       else if (data.questions[0].responses[i].name == 'De temps en temps' && data.questions[0].responses[i].afraid[j].name == 'Non') {
@@ -408,14 +511,14 @@ function drawTopic1(data) {
         $('.t1-p2-c6').css('position', 'absolute').css('bottom', '50px').css('left', '66px')
         $('.t1-p2-c6')
         .mouseenter(() => {
-          $('#result').text(r9);
-          $('#text').text(rp9);
-          $('.t1-p2-c6').find('object').css('border', '3px solid #FFF')
+          $('#result-t1').text(r9);
+          $('#text-t1').text(rp9);
+          $('.t1-p2-c6').find('object').css('box-shadow', '1px 1px 30px 0px #ffffff')
         })
         .mouseleave(() => {
-          $('#result').text('');
-          $('#text').text('');
-          $('.t1-p2-c6').find('object').css('border', 'none')
+          $('#result-t1').text('');
+          $('#text-t1').text('');
+          $('.t1-p2-c6').find('object').css('box-shadow', 'none')
         });
       }
     }
@@ -423,6 +526,366 @@ function drawTopic1(data) {
 }
 
 function drawTopic2(data) {
+
+  let res3Length = data.questions[2].responses.length;
+
+  for (var i = 0; i < res3Length; i++) {
+    var percent = data.questions[2].responses[i].percent
+    var res = data.questions[2].responses[i].result
+
+    if (data.questions[2].responses[i].name == 'Le plus possible') {
+      var b1 = new Progress(percent, '#45F4CA', '#45F4CA', 't2-b1', 'topic2')
+      b1.getElement()
+      var p1 = percent + '%'
+      var r1 = res
+      $('.t2-b1')
+      .mouseenter(() => {
+        console.log(r1);
+        $('#percent-t2').text(p1);
+        $('#result-t2').text(r1);
+        $('.t2-b1').css('box-shadow', '1px 1px 30px 0px #ffffff')
+      })
+      .mouseleave(() => {
+        $('#percent-t2').text('');
+        $('#result-t2').text('');
+        $('.t2-b1').css('box-shadow', 'none')
+      });
+    }
+    else if (data.questions[2].responses[i].name == 'Plus que maintenant') {
+      var b2 = new Progress(percent, '#45F4CA', '#6446F2', 't2-b2', 'topic2')
+      b2.getElement()
+      var p2 = percent + '%'
+      var r2 = res
+      $('.t2-b2')
+      .mouseenter(() => {
+        $('#percent-t2').text(p2);
+        $('#result-t2').text(r2);
+        $('.t2-b2').css('box-shadow', '1px 1px 30px 0px #ffffff')
+      })
+      .mouseleave(() => {
+        $('#percent-t2').text('');
+        $('#result-t2').text('');
+        $('.t2-b2').css('box-shadow', 'none')
+      });
+    }
+    else if (data.questions[2].responses[i].name == 'Ni plus ni moins') {
+      var b3 = new Progress(percent, '#6446F2', '#6446F2', 't2-b3', 'topic2')
+      b3.getElement()
+      var p3 = percent + '%'
+      var r3 = res
+      $('.t2-b3')
+      .mouseenter(() => {
+        $('#percent-t2').text(p3);
+        $('#result-t2').text(r3);
+        $('.t2-b3').css('box-shadow', '1px 1px 30px 0px #ffffff')
+      })
+      .mouseleave(() => {
+        $('#percent-t2').text('');
+        $('#result-t2').text('');
+        $('.t2-b3').css('box-shadow', 'none')
+      });
+    }
+    else if (data.questions[2].responses[i].name == 'Moins') {
+      var b4 = new Progress(percent, '#FF4A69', '#6446F2', 't2-b4', 'topic2')
+      b4.getElement()
+      var p4 = percent + '%'
+      var r4 = res
+      $('.t2-b4')
+      .mouseenter(() => {
+        $('#percent-t2').text(p4);
+        $('#result-t2').text(r4);
+        $('.t2-b4').css('box-shadow', '1px 1px 30px 0px #ffffff')
+      })
+      .mouseleave(() => {
+        $('#percent-t2').text('');
+        $('#result-t2').text('');
+        $('.t2-b4').css('box-shadow', 'none')
+      });
+    }
+    else if (data.questions[2].responses[i].name == 'Jamais') {
+      var b5 = new Progress(percent, '#FF4A69', '#FF4A69', 't2-b5', 'topic2')
+      b5.getElement()
+      var p5 = percent + '%'
+      var r5 = res
+      $('.t2-b5')
+      .mouseenter(() => {
+        $('#percent-t2').text(p5);
+        $('#result-t2').text(r5);
+        $('.t2-b5').css('box-shadow', '1px 1px 30px 0px #ffffff')
+      })
+      .mouseleave(() => {
+        $('#percent-t2').text('');
+        $('#result-t2').text('');
+        $('.t2-b5').css('box-shadow', 'none')
+      });
+    }
+  }
+
+}
+
+function drawTopic3(data) {
+
+  let res4Length = data.questions[3].responses.length;
+
+  for (var i = 0; i < res4Length; i++) {
+    var percent = data.questions[3].responses[i].percent * 1
+    var res = data.questions[3].responses[i].result
+
+    if (data.questions[3].responses[i].name == 'Dans une start-up') {
+      var b1 = new Bar(percent, '#45F4CA', '#45F4CA', 't3-b1', 'topic3')
+      b1.getElement()
+      var p1 = percent + '%'
+      var r1 = res
+      $('.t3-b1>span').text(p1);
+      $('.t3-b1>p').text(r1);
+    }
+    else if (data.questions[3].responses[i].name == 'J’aurai ma propre boîte') {
+      var b2 = new Bar(percent, '#66BEFF', '#66BEFF', 't3-b2', 'topic3')
+      b2.getElement()
+      var p2 = percent + '%'
+      var r2 = res
+      $('.t3-b2>span').text(p2);
+      $('.t3-b2>p').text(r2);
+    }
+    else if (data.questions[3].responses[i].name == 'Dans une agence') {
+      var b3 = new Bar(percent, '#6446F2', '#6446F2', 't3-b3', 'topic3')
+      b3.getElement()
+      var p3 = percent + '%'
+      var r3 = res
+      $('.t3-b3>span').text(p3);
+      $('.t3-b3>p').text(r3);
+    }
+    else if (data.questions[3].responses[i].name == 'J’aurai tout plaqué pour faire le tour du monde') {
+      var b4 = new Bar(percent, '#FF4A69', '#FF4A69', 't3-b4', 'topic3')
+      b4.getElement()
+      var p4 = percent + '%'
+      var r4 = res
+      $('.t3-b4>span').text(p4);
+      $('.t3-b4>p').text(r4);
+    }
+    else if (data.questions[3].responses[i].name == 'En freelance') {
+      var b5 = new Bar(percent, '#FF9750', '#FF9750', 't3-b5', 'topic3')
+      b5.getElement()
+      var p5 = percent + '%'
+      var r5 = res
+      $('.t3-b5>span').text(p5);
+      $('.t3-b5>p').text(r5);
+    }
+    else if (data.questions[3].responses[i].name == 'La vie me dira') {
+      var b6 = new Bar(percent, '#FFE650', '#FFE650', 't3-b6', 'topic3')
+      b6.getElement()
+      var p6 = percent + '%'
+      var r6 = res
+      $('.t3-b6>span').text(p6);
+      $('.t3-b6>p').text(r6);
+    }
+  }
+
+}
+
+function drawTopic4(data) {
+  let res5Length = data.questions[4].responses.length;
+
+  for (var i = 0; i < res5Length; i++) {
+
+    var people = data.questions[4].responses[i].people
+    var coeff = people * 10
+    var percent = data.questions[4].responses[i].percent
+    var res_text = data.questions[4].responses[i].result
+
+    if (data.questions[4].responses[i].name == 'Pas du tout') {
+      var c1 = new Circle(coeff, '#45F4CA', '#66BEFF', 't4-p1-c1', 'topic4part1')
+      c1.getElement()
+      var p1 = percent + '%'
+      var r1 = res_text
+      $('.t4-p1-c1')
+      .mouseenter(() => {
+        $('#percent-t4').text(p1);
+        $('#result-t4').text(r1);
+      })
+      .mouseleave(() => {
+        $('#percent-t4').text('');
+        $('#result-t4').text('');
+      });
+    }
+    else if (data.questions[4].responses[i].name == 'Il restera du chemin à faire') {
+      var c2 = new Circle(coeff, '#FF4A69', '#6A32A5', 't4-p1-c2', 'topic4part1')
+      c2.getElement()
+      var p2 = percent + '%'
+      var r2 = res_text
+      $('.t4-p1-c2')
+      .mouseenter(() => {
+        $('#percent-t4').text(p2);
+        $('#result-t4').text(r2);
+      })
+      .mouseleave(() => {
+        $('#percent-t4').text('');
+        $('#result-t4').text('');
+      });
+    }
+    else if (data.questions[4].responses[i].name == 'J’aurai quasiment fait tout ce dont je rêve aujourd’hui') {
+      var c3 = new Circle(coeff, '#FFE650', '#FF4A69', 't4-p1-c3', 'topic4part1')
+      c3.getElement()
+      var p3 = percent + '%'
+      var r3 = res_text
+      $('.t4-p1-c3')
+      .mouseenter(() => {
+        $('#percent-t4').text(p3);
+        $('#result-t4').text(r3);
+      })
+      .mouseleave(() => {
+        $('#percent-t4').text('');
+        $('#result-t4').text('');
+      });
+    }
+    else if (data.questions[4].responses[i].name == 'Absolument') {
+      var c4 = new Circle(coeff, '#6A32A5', '#66BEFF', 't4-p1-c4', 'topic4part1')
+      c4.getElement()
+      var p4 = percent + '%'
+      var r4 = res_text
+      $('.t4-p1-c4')
+      .mouseenter(() => {
+        $('#percent-t4').text(p4);
+        $('#result-t4').text(r4);
+      })
+      .mouseleave(() => {
+        $('#percent-t4').text('');
+        $('#result-t4').text('');
+      });
+    }
+
+  }
+}
+
+function drawTopic5(data) {
+  let res6Length = data.questions[6].responses.length;
+
+  for (var i = 0; i < res6Length; i++) {
+
+    var people = data.questions[6].responses[i].people
+    var coeff = people * 25
+    var percent = data.questions[6].responses[i].percent
+    var res_text = data.questions[6].responses[i].result
+
+    if (data.questions[6].responses[i].name == "A l'étranger") {
+      for (var l = 0; l < people; l++) {
+        var t3 = new Trait(coeff,'#FF9750', 't5-t1', 'topic5')
+        t3.getElement()
+      }
+    }
+    else if (data.questions[6].responses[i].name == "Dans le même coin") {
+      for (var j = 0; j < people; j++) {
+        var t1 = new Trait(coeff,'#FF4A69', 't5-t2', 'topic5')
+        t1.getElement()
+      }
+    }
+    else if (data.questions[6].responses[i].name == "Dans le même pays") {
+      for (var k = 0; k < people; k++) {
+        var t2 = new Trait(coeff,'#FFE650', 't5-t3', 'topic5')
+        t2.getElement()
+      }
+    }
+    else if (data.questions[6].responses[i].name == "À l’autre bout de la terre") {
+      for (var l = 0; l < people; l++) {
+        var t3 = new Trait(coeff,'#45F4CA', 't5-t4', 'topic5')
+        t3.getElement()
+      }
+    }
+
+  }
+}
+
+function drawTopic6(data) {
+  let res7Length = data.questions[7].responses.length;
+
+  for (var i = 0; i < res7Length; i++) {
+
+    var percent = data.questions[7].responses[i].percent
+    var res_text = data.questions[7].responses[i].result
+
+    if (data.questions[7].responses[i].name == "Oui") {
+      var b1 = new Progress(percent, '#66BEFF', '#FF4A69', 't6-b1', 'topic6')
+      b1.getElement()
+      var p1 = percent + '%'
+      var r1 = res_text
+      $('.t6-b1')
+      .mouseenter(() => {
+        $('#percent-t6').text(p1);
+        $('#result-t6').text(r1);
+        $('.t6-b1').css('border', '3px solid #FFF')
+      })
+      .mouseleave(() => {
+        $('#percent-t6').text('');
+        $('#result-t6').text('');
+        $('.t6-b1').css('border', 'none')
+      });
+    }
+    else if (data.questions[7].responses[i].name == "Ni meilleure ni pire") {
+      var b2 = new Progress(percent, '#FF4A69', '#FF4A69', 't6-b2', 'topic6')
+      b2.getElement()
+      var p2 = percent + '%'
+      var r2 = res_text
+      $('.t6-b2')
+      .mouseenter(() => {
+        $('#percent-t6').text(p2);
+        $('#result-t6').text(r2);
+        $('.t6-b2').css('border', '3px solid #FFF')
+      })
+      .mouseleave(() => {
+        $('#percent-t6').text('');
+        $('#result-t6').text('');
+        $('.t6-b2').css('border', 'none')
+      });
+    }
+    else if (data.questions[7].responses[i].name == "Non") {
+      var b3 = new Progress(percent, '#FFE650', '#FF4A69', 't6-b3', 'topic6')
+      b3.getElement()
+      var p3 = percent + '%'
+      var r3 = res_text
+      $('.t6-b3')
+      .mouseenter(() => {
+        $('#percent-t6').text(p3);
+        $('#result-t6').text(r3);
+        $('.t6-b3').css('border', '3px solid #FFF')
+      })
+      .mouseleave(() => {
+        $('#percent-t6').text('');
+        $('#result-t6').text('');
+        $('.t6-b3').css('border', 'none')
+      });
+    }
+
+  }
+}
+
+function drawFinal(data) {
+
+  var final_length = data.conclusion.length
+
+  for (var i = 0; i < final_length; i++) {
+
+    var percent = data.conclusion[i].percent
+    var res = data.conclusion[i].result
+    var coeff = percent * 3
+
+    if (data.conclusion[i].name == 'optimist') {
+      var c1 = new Circle(coeff, '#66BEFF', '#45F4CA', 'f1', 'final')
+      c1.getElement()
+      var p1 = percent + '%'
+      var r1 = res
+      $('.final-p1').text(p1);
+      $('.final-r1').text(r1);
+    }
+    else if (data.conclusion[i].name == 'pessimist') {
+      var c2 = new Circle(coeff, '#FF4A69', '#FFE650', 'f2', 'final')
+      c2.getElement()
+      var p2 = percent + '%'
+      var r2 = res
+      $('.final-p2').text(p2);
+      $('.final-r2').text(r2);
+    }
+
+  }
 
 }
 
