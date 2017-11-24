@@ -37,6 +37,45 @@
         color: $color-mint;
       }
     }
+    .legend {
+      position: absolute;
+      bottom: 100px;
+      ul {
+        padding: 0;
+        li {
+          list-style: none;
+          display: flex;
+          align-items: center;
+          margin: 15px 0;
+          .topic2-progress1 {
+            width: 50px;
+            height: 20px;
+            background: $color-mint ;
+            border-radius: 20px;
+          }
+          .topic2-progress2 {
+            width: 50px;
+            height: 20px;
+            background:$color-purpleblue ;
+            border-radius: 20px;
+          }
+          .topic2-progress3 {
+            width: 50px;
+            height: 20px;
+            background:$color-pink ;
+            border-radius: 20px;
+          }
+          p {
+            margin-left: 20px;
+            color: $color-white;
+            font-family: $font-muli-xs;
+            text-transform: uppercase;
+            font-size: 0.8em;
+            letter-spacing: 1px;
+          }
+        }
+      }
+    }
     a {
       position: absolute;
       bottom: 0;

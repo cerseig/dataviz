@@ -304,10 +304,12 @@ function drawTopic1(data) {
         .mouseenter(() => {
           $('#percent-t1').text(p1);
           $('#result-t1').text(r1);
+          $('.t1-p1-c1').find('object').css('box-shadow', '1px 1px 30px 0px #ffffff')
         })
         .mouseleave(() => {
           $('#percent-t1').text('');
           $('#result-t1').text('');
+          $('.t1-p1-c1').find('object').css('box-shadow', 'none')
         });
 
       } else if (data.questions[0].responses[j].name == 'Souvent') {
@@ -320,10 +322,12 @@ function drawTopic1(data) {
         .mouseenter(() => {
           $('#percent-t1').text(p2);
           $('#result-t1').text(r2);
+          $('.t1-p1-c2').find('object').css('box-shadow', '1px 1px 30px 0px #ffffff')
         })
         .mouseleave(() => {
           $('#percent-t1').text('');
           $('#result-t1').text('');
+          $('.t1-p1-c2').find('object').css('box-shadow', 'none')
         });
 
       } else if (data.questions[0].responses[j].name == 'De temps en temps') {
@@ -336,10 +340,12 @@ function drawTopic1(data) {
         .mouseenter(() => {
           $('#percent-t1').text(p3);
           $('#result-t1').text(r3);
+          $('.t1-p1-c3').find('object').css('box-shadow', '1px 1px 30px 0px #ffffff')
         })
         .mouseleave(() => {
           $('#percent-t1').text('');
           $('#result-t1').text('');
+          $('.t1-p1-c3').find('object').css('box-shadow', 'none')
         });
       }
     }
@@ -369,7 +375,6 @@ function drawTopic1(data) {
           $('#result-t1').text(r4);
           $('#text-t1').text(rp1);
           $('.t1-p2-c1').find('object').css('box-shadow', '1px 1px 30px 0px #ffffff')
-          // box-shadow: 1px 1px 30px 0px #ffffff;
         })
         .mouseleave(() => {
           $('#result-t1').text('');
@@ -693,6 +698,8 @@ function drawTopic4(data) {
     var percent = data.questions[4].responses[i].percent
     var res_text = data.questions[4].responses[i].result
 
+    let aspectLength = data.questions[4].responses[i].aspect.length
+
     if (data.questions[4].responses[i].name == 'Pas du tout') {
       var c1 = new Circle(coeff, '#45F4CA', '#66BEFF', 't4-p1-c1', 'topic4part1')
       c1.getElement()
@@ -702,11 +709,94 @@ function drawTopic4(data) {
       .mouseenter(() => {
         $('#percent-t4').text(p1);
         $('#result-t4').text(r1);
+        $('.t4-p1-c1').find('object').css('box-shadow', '1px 1px 30px 0px #ffffff')
       })
       .mouseleave(() => {
         $('#percent-t4').text('');
         $('#result-t4').text('');
+        $('.t4-p1-c1').find('object').css('box-shadow', 'none')
       });
+
+      for (var j = 0; j < aspectLength; j++) {
+
+        var percent2 = data.questions[4].responses[i].aspect[j].percent
+        var coeff2 = percent2
+        var res_text2 = data.questions[4].responses[i].aspect[j].result
+
+        if (data.questions[4].responses[i].aspect[j].name == 'familial') {
+          var p2_c1 = new Circle(coeff2, '#45F4CA', '#66BEFF', 't4-p2-c1', 'topic4part2')
+          p2_c1.getElement()
+
+          var p2_p1 = percent2 + '%'
+          var p2_r1 = res_text2
+          $('.t4-p2-c1')
+          .mouseenter(() => {
+            $('#percent-t4').text(p2_p1);
+            $('#result-t4').text(p2_r1);
+            $('.t4-p2-c1').find('object').css('box-shadow', '1px 1px 30px 0px #ffffff')
+          })
+          .mouseleave(() => {
+            $('#percent-t4').text('');
+            $('#result-t4').text('');
+            $('.t4-p2-c1').find('object').css('box-shadow', 'none')
+          });
+        }
+        else if (data.questions[4].responses[i].aspect[j].name == 'professionnel') {
+          var p2_c2 = new Circle(coeff2, '#45F4CA', '#66BEFF', 't4-p2-c2', 'topic4part2')
+          p2_c2.getElement()
+
+          var p2_p2 = percent2 + '%'
+          var p2_r2 = res_text2
+          $('.t4-p2-c2')
+          .mouseenter(() => {
+            $('#percent-t4').text(p2_p2);
+            $('#result-t4').text(p2_r2);
+            $('.t4-p2-c2').find('object').css('box-shadow', '1px 1px 30px 0px #ffffff')
+          })
+          .mouseleave(() => {
+            $('#percent-t4').text('');
+            $('#result-t4').text('');
+            $('.t4-p2-c2').find('object').css('box-shadow', 'none')
+          });
+        }
+        else if (data.questions[4].responses[i].aspect[j].name == 'materiel') {
+          var p2_c3 = new Circle(coeff2, '#45F4CA', '#66BEFF', 't4-p2-c3', 'topic4part2')
+          p2_c3.getElement()
+
+          var p2_p3 = percent2 + '%'
+          var p2_r3 = res_text2
+          $('.t4-p2-c3')
+          .mouseenter(() => {
+            $('#percent-t4').text(p2_p3);
+            $('#result-t4').text(p2_r3);
+            $('.t4-p2-c3').find('object').css('box-shadow', '1px 1px 30px 0px #ffffff')
+          })
+          .mouseleave(() => {
+            $('#percent-t4').text('');
+            $('#result-t4').text('');
+            $('.t4-p2-c3').find('object').css('box-shadow', 'none')
+          });
+        }
+        else if (data.questions[4].responses[i].aspect[j].name == 'epanouissement') {
+          var p2_c4 = new Circle(coeff2, '#45F4CA', '#66BEFF', 't4-p2-c4', 'topic4part2')
+          p2_c4.getElement()
+
+          var p2_p4 = percent2 + '%'
+          var p2_r4 = res_text2
+          $('.t4-p2-c4')
+          .mouseenter(() => {
+            $('#percent-t4').text(p2_p4);
+            $('#result-t4').text(p2_r4);
+            $('.t4-p2-c4').find('object').css('box-shadow', '1px 1px 30px 0px #ffffff')
+          })
+          .mouseleave(() => {
+            $('#percent-t4').text('');
+            $('#result-t4').text('');
+            $('.t4-p2-c4').find('object').css('box-shadow', 'none')
+          });
+        }
+      }
+
     }
     else if (data.questions[4].responses[i].name == 'Il restera du chemin à faire') {
       var c2 = new Circle(coeff, '#FF4A69', '#6A32A5', 't4-p1-c2', 'topic4part1')
@@ -717,11 +807,94 @@ function drawTopic4(data) {
       .mouseenter(() => {
         $('#percent-t4').text(p2);
         $('#result-t4').text(r2);
+        $('.t4-p1-c2').find('object').css('box-shadow', '1px 1px 30px 0px #ffffff')
       })
       .mouseleave(() => {
         $('#percent-t4').text('');
         $('#result-t4').text('');
+        $('.t4-p1-c2').find('object').css('box-shadow', 'none')
       });
+
+      for (var j = 0; j < aspectLength; j++) {
+
+        var percent2 = data.questions[4].responses[i].aspect[j].percent
+        var coeff2 = percent2
+        var res_text2 = data.questions[4].responses[i].aspect[j].result
+
+        if (data.questions[4].responses[i].aspect[j].name == 'familial') {
+          var p2_c5 = new Circle(coeff2, '#FF4A69', '#6A32A5', 't4-p2-c5', 'topic4part2')
+          p2_c5.getElement()
+
+          var p2_p5 = percent2 + '%'
+          var p2_r5 = res_text2
+          $('.t4-p2-c5')
+          .mouseenter(() => {
+            $('#percent-t4').text(p2_p5);
+            $('#result-t4').text(p2_r5);
+            $('.t4-p2-c5').find('object').css('box-shadow', '1px 1px 30px 0px #ffffff')
+          })
+          .mouseleave(() => {
+            $('#percent-t4').text('');
+            $('#result-t4').text('');
+            $('.t4-p2-c5').find('object').css('box-shadow', 'none')
+          });
+        }
+        else if (data.questions[4].responses[i].aspect[j].name == 'professionnel') {
+          var p2_c6 = new Circle(coeff2, '#FF4A69', '#6A32A5', 't4-p2-c6', 'topic4part2')
+          p2_c6.getElement()
+
+          var p2_p6 = percent2 + '%'
+          var p2_r6 = res_text2
+          $('.t4-p2-c6')
+          .mouseenter(() => {
+            $('#percent-t4').text(p2_p6);
+            $('#result-t4').text(p2_r6);
+            $('.t4-p2-c6').find('object').css('box-shadow', '1px 1px 30px 0px #ffffff')
+          })
+          .mouseleave(() => {
+            $('#percent-t4').text('');
+            $('#result-t4').text('');
+            $('.t4-p2-c6').find('object').css('box-shadow', 'none')
+          });
+        }
+        else if (data.questions[4].responses[i].aspect[j].name == 'materiel') {
+          var p2_c7 = new Circle(coeff2, '#FF4A69', '#6A32A5', 't4-p2-c7', 'topic4part2')
+          p2_c7.getElement()
+
+          var p2_p7 = percent2 + '%'
+          var p2_r7 = res_text2
+          $('.t4-p2-c7')
+          .mouseenter(() => {
+            $('#percent-t4').text(p2_p7);
+            $('#result-t4').text(p2_r7);
+            $('.t4-p2-c7').find('object').css('box-shadow', '1px 1px 30px 0px #ffffff')
+          })
+          .mouseleave(() => {
+            $('#percent-t4').text('');
+            $('#result-t4').text('');
+            $('.t4-p2-c7').find('object').css('box-shadow', 'none')
+          });
+        }
+        else if (data.questions[4].responses[i].aspect[j].name == 'epanouissement') {
+          var p2_c8 = new Circle(coeff2, '#FF4A69', '#6A32A5', 't4-p2-c8', 'topic4part2')
+          p2_c8.getElement()
+
+          var p2_p8 = percent2 + '%'
+          var p2_r8 = res_text2
+          $('.t4-p2-c8')
+          .mouseenter(() => {
+            $('#percent-t4').text(p2_p8);
+            $('#result-t4').text(p2_r8);
+            $('.t4-p2-c8').find('object').css('box-shadow', '1px 1px 30px 0px #ffffff')
+          })
+          .mouseleave(() => {
+            $('#percent-t4').text('');
+            $('#result-t4').text('');
+            $('.t4-p2-c8').find('object').css('box-shadow', 'none')
+          });
+        }
+      }
+
     }
     else if (data.questions[4].responses[i].name == 'J’aurai quasiment fait tout ce dont je rêve aujourd’hui') {
       var c3 = new Circle(coeff, '#FFE650', '#FF4A69', 't4-p1-c3', 'topic4part1')
@@ -732,11 +905,94 @@ function drawTopic4(data) {
       .mouseenter(() => {
         $('#percent-t4').text(p3);
         $('#result-t4').text(r3);
+        $('.t4-p1-c3').find('object').css('box-shadow', '1px 1px 30px 0px #ffffff')
       })
       .mouseleave(() => {
         $('#percent-t4').text('');
         $('#result-t4').text('');
+        $('.t4-p1-c3').find('object').css('box-shadow', 'none')
       });
+
+      for (var j = 0; j < aspectLength; j++) {
+
+        var percent2 = data.questions[4].responses[i].aspect[j].percent
+        var coeff2 = percent2
+        var res_text2 = data.questions[4].responses[i].aspect[j].result
+
+        if (data.questions[4].responses[i].aspect[j].name == 'familial') {
+          var p2_c9 = new Circle(coeff2, '#FFE650', '#FF4A69', 't4-p2-c9', 'topic4part2')
+          p2_c9.getElement()
+
+          var p2_p9 = percent2 + '%'
+          var p2_r9 = res_text2
+          $('.t4-p2-c9')
+          .mouseenter(() => {
+            $('#percent-t4').text(p2_p9);
+            $('#result-t4').text(p2_r9);
+            $('.t4-p2-c9').find('object').css('box-shadow', '1px 1px 30px 0px #ffffff')
+          })
+          .mouseleave(() => {
+            $('#percent-t4').text('');
+            $('#result-t4').text('');
+            $('.t4-p2-c9').find('object').css('box-shadow', 'none')
+          });
+        }
+        else if (data.questions[4].responses[i].aspect[j].name == 'professionnel') {
+          var p2_c10 = new Circle(coeff2, '#FFE650', '#FF4A69', 't4-p2-c10', 'topic4part2')
+          p2_c10.getElement()
+
+          var p2_p10 = percent2 + '%'
+          var p2_r10 = res_text2
+          $('.t4-p2-c10')
+          .mouseenter(() => {
+            $('#percent-t4').text(p2_p10);
+            $('#result-t4').text(p2_r10);
+            $('.t4-p2-c10').find('object').css('box-shadow', '1px 1px 30px 0px #ffffff')
+          })
+          .mouseleave(() => {
+            $('#percent-t4').text('');
+            $('#result-t4').text('');
+            $('.t4-p2-c10').find('object').css('box-shadow', 'none')
+          });
+        }
+        else if (data.questions[4].responses[i].aspect[j].name == 'materiel') {
+          var p2_c11 = new Circle(coeff2, '#FFE650', '#FF4A69', 't4-p2-c11', 'topic4part2')
+          p2_c11.getElement()
+
+          var p2_p11 = percent2 + '%'
+          var p2_r11 = res_text2
+          $('.t4-p2-c11')
+          .mouseenter(() => {
+            $('#percent-t4').text(p2_p11);
+            $('#result-t4').text(p2_r11);
+            $('.t4-p2-c11').find('object').css('box-shadow', '1px 1px 30px 0px #ffffff')
+          })
+          .mouseleave(() => {
+            $('#percent-t4').text('');
+            $('#result-t4').text('');
+            $('.t4-p2-c11').find('object').css('box-shadow', 'none')
+          });
+        }
+        else if (data.questions[4].responses[i].aspect[j].name == 'epanouissement') {
+          var p2_c12 = new Circle(coeff2, '#FFE650', '#FF4A69', 't4-p2-c12', 'topic4part2')
+          p2_c12.getElement()
+
+          var p2_p12 = percent2 + '%'
+          var p2_r12 = res_text2
+          $('.t4-p2-c12')
+          .mouseenter(() => {
+            $('#percent-t4').text(p2_p12);
+            $('#result-t4').text(p2_r12);
+            $('.t4-p2-c12').find('object').css('box-shadow', '1px 1px 30px 0px #ffffff')
+          })
+          .mouseleave(() => {
+            $('#percent-t4').text('');
+            $('#result-t4').text('');
+            $('.t4-p2-c12').find('object').css('box-shadow', 'none')
+          });
+        }
+      }
+
     }
     else if (data.questions[4].responses[i].name == 'Absolument') {
       var c4 = new Circle(coeff, '#6A32A5', '#66BEFF', 't4-p1-c4', 'topic4part1')
@@ -747,14 +1003,95 @@ function drawTopic4(data) {
       .mouseenter(() => {
         $('#percent-t4').text(p4);
         $('#result-t4').text(r4);
+        $('.t4-p1-c4').find('object').css('box-shadow', '1px 1px 30px 0px #ffffff')
       })
       .mouseleave(() => {
         $('#percent-t4').text('');
         $('#result-t4').text('');
+        $('.t4-p1-c4').find('object').css('box-shadow', 'none')
       });
+
+      for (var j = 0; j < aspectLength; j++) {
+
+        var percent2 = data.questions[4].responses[i].aspect[j].percent
+        var coeff2 = percent2
+        var res_text2 = data.questions[4].responses[i].aspect[j].result
+
+        if (data.questions[4].responses[i].aspect[j].name == 'familial') {
+          var p2_c13 = new Circle(coeff2, '#6A32A5', '#66BEFF', 't4-p2-c13', 'topic4part2')
+          p2_c13.getElement()
+
+          var p2_p13 = percent2 + '%'
+          var p2_r13 = res_text2
+          $('.t4-p2-c13')
+          .mouseenter(() => {
+            $('#percent-t4').text(p2_p13);
+            $('#result-t4').text(p2_r13);
+            $('.t4-p2-c13').find('object').css('box-shadow', '1px 1px 30px 0px #ffffff')
+          })
+          .mouseleave(() => {
+            $('#percent-t4').text('');
+            $('#result-t4').text('');
+            $('.t4-p2-c13').find('object').css('box-shadow', 'none')
+          });
+        }
+        else if (data.questions[4].responses[i].aspect[j].name == 'professionnel') {
+          var p2_c14 = new Circle(coeff2, '#6A32A5', '#66BEFF', 't4-p2-c14', 'topic4part2')
+          p2_c14.getElement()
+
+          var p2_p14 = percent2 + '%'
+          var p2_r14 = res_text2
+          $('.t4-p2-c14')
+          .mouseenter(() => {
+            $('#percent-t4').text(p2_p14);
+            $('#result-t4').text(p2_r14);
+            $('.t4-p2-c14').find('object').css('box-shadow', '1px 1px 30px 0px #ffffff')
+          })
+          .mouseleave(() => {
+            $('#percent-t4').text('');
+            $('#result-t4').text('');
+            $('.t4-p2-c14').find('object').css('box-shadow', 'none')
+          });
+        }
+        else if (data.questions[4].responses[i].aspect[j].name == 'materiel') {
+          var p2_c15 = new Circle(coeff2, '#6A32A5', '#66BEFF', 't4-p2-c15', 'topic4part2')
+          p2_c15.getElement()
+
+          var p2_p15 = percent2 + '%'
+          var p2_r15 = res_text2
+          $('.t4-p2-c15')
+          .mouseenter(() => {
+            $('#percent-t4').text(p2_p15);
+            $('#result-t4').text(p2_r15);
+          })
+          .mouseleave(() => {
+            $('#percent-t4').text('');
+            $('#result-t4').text('');
+          });
+        }
+        else if (data.questions[4].responses[i].aspect[j].name == 'epanouissement') {
+          var p2_c16 = new Circle(coeff2, '#6A32A5', '#66BEFF', 't4-p2-c16', 'topic4part2')
+          p2_c16.getElement()
+
+          var p2_p16 = percent2 + '%'
+          var p2_r16 = res_text2
+          $('.t4-p2-c16')
+          .mouseenter(() => {
+            $('#percent-t4').text(p2_p16);
+            $('#result-t4').text(p2_r16);
+          })
+          .mouseleave(() => {
+            $('#percent-t4').text('');
+            $('#result-t4').text('');
+          });
+        }
+      }
+
     }
 
   }
+
+
 }
 
 function drawTopic5(data) {
@@ -771,24 +1108,66 @@ function drawTopic5(data) {
       for (var l = 0; l < people; l++) {
         var t3 = new Trait(coeff,'#FF9750', 't5-t1', 'topic5')
         t3.getElement()
+        var p1 = percent + '%'
+        $('.t5-t1')
+        .mouseenter(() => {
+          $('.t5-t1').css('height', '5px');
+          $('.p-t5-t1').text(p1)
+        })
+        .mouseleave(() => {
+          $('.t5-t1').css('height', '2px');
+          $('.p-t5-t1').text('')
+        })
       }
     }
     else if (data.questions[6].responses[i].name == "Dans le même coin") {
       for (var j = 0; j < people; j++) {
         var t1 = new Trait(coeff,'#FF4A69', 't5-t2', 'topic5')
         t1.getElement()
+        var p2 = percent + '%'
+        $('.t5-t2')
+        .mouseenter(() => {
+          $('.t5-t2').css('height', '5px');
+          $('.p-t5-t2').text(p2)
+        })
+        .mouseleave(() => {
+          $('.t5-t2').css('height', '2px');
+          $('.p-t5-t2').text('')
+        })
       }
     }
     else if (data.questions[6].responses[i].name == "Dans le même pays") {
       for (var k = 0; k < people; k++) {
         var t2 = new Trait(coeff,'#FFE650', 't5-t3', 'topic5')
         t2.getElement()
+        var p3 = percent + '%'
+        $('.p-t5-t3').text(p3)
+        $('.t5-t3')
+        .mouseenter(() => {
+          $('.t5-t3').css('height', '5px');
+          $('.p-t5-t3').text(p3)
+        })
+        .mouseleave(() => {
+          $('.t5-t3').css('height', '2px');
+          $('.p-t5-t3').text('')
+        })
       }
     }
     else if (data.questions[6].responses[i].name == "À l’autre bout de la terre") {
       for (var l = 0; l < people; l++) {
-        var t3 = new Trait(coeff,'#45F4CA', 't5-t4', 'topic5')
-        t3.getElement()
+        var t4 = new Trait(coeff,'#45F4CA', 't5-t4', 'topic5')
+        t4.getElement()
+        var p4 = percent + '%'
+
+        $('.t5-t4')
+        .mouseenter(() => {
+          $('.t5-t4').css('height', '5px');
+          $('.p-t5-t4').text(p4)
+        })
+        .mouseleave(() => {
+          $('.t5-t4').css('height', '2px');
+          $('.p-t5-t4').text('')
+        })
       }
     }
 

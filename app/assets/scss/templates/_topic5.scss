@@ -1,3 +1,10 @@
+@keyframes zoom {
+  0% { transform: scale(1); }
+  50% { transform: scale(2); }
+  100% { transform: scale(1); }
+}
+
+
 .topic5 {
   display: none;
   .content-t5 {
@@ -47,6 +54,12 @@
           display: flex;
           align-items: center;
           margin: 25px 0;
+          div:nth-child(3) {
+            color: $color-white;
+            font-family: $font-muli-l;
+            font-size: 1.2em;
+            margin-left: 10px;
+          }
           .t5-t1 {
             width: 20px;
             height: 2px;
@@ -141,127 +154,140 @@
         height: 10px;
         border-radius: 50%;
       }
-      .t5-t1:nth-child(2) {
+      .data-dontknow {
+        position: absolute;
+        top: 175px;
+        left: 175px;
+        width:150px;
+        height: 150px;
+        border-radius: 50%;
+        border: 3px solid $color-lightblue;
+        -webkit-animation: zoom 2s infinite; /* Safari 4+ */
+        -moz-animation: zoom 2s infinite; /* Fx 5+ */
+        -o-animation: zoom 2s infinite; /* Opera 12+ */
+        animation: zoom 2s infinite; /* IE 10+, Fx 29+ */
+      }
+      .t5-t1:nth-child(3) {
         top: 246px;
         transform: rotate(-13deg);
         left: 254px;
       }
-      .t5-t2:nth-child(3) {
+      .t5-t2:nth-child(4) {
         top: 211px;
         left: 241px;
         transform: rotate(154.26deg);
       }
-      .t5-t2:nth-child(4) {
+      .t5-t2:nth-child(5) {
         top: 287px;
         left: 240px;
         transform: rotate(205.68deg);
       }
-      .t5-t2:nth-child(5) {
+      .t5-t2:nth-child(6) {
         top: 334px;
         left: 181px;
         transform: rotate(257.1deg);
       }
-      .t5-t2:nth-child(6) {
+      .t5-t2:nth-child(7) {
         top: 316px;
         left: 109px;
         transform: rotate(308.52deg);
       }
-      .t5-t2:nth-child(7) {
+      .t5-t2:nth-child(8) {
         top: 250px;
         left: 75px;
         transform: rotate(359.94deg);
       }
-      .t5-t2:nth-child(8) {
+      .t5-t2:nth-child(9) {
         top: 180px;
         left: 108px;
         transform: rotate(51.42deg);
       }
-      .t5-t2:nth-child(9) {
+      .t5-t2:nth-child(10) {
         top: 165px;
         left: 182px;
         transform: rotate(102.84deg);
       }
-      .t5-t3:nth-child(10) {
+      .t5-t3:nth-child(11) {
         top: 275px;
         left: 248px;
         transform: rotate(12deg);
       }
-      .t5-t3:nth-child(11) {
+      .t5-t3:nth-child(12) {
         top: 325px;
         left: 223px;
         transform: rotate(37.71deg);
       }
-      .t5-t3:nth-child(12) {
+      .t5-t3:nth-child(13) {
         top: 359px;
         left: 180px;
         transform: rotate(63.42deg);
       }
-      .t5-t3:nth-child(13) {
+      .t5-t3:nth-child(14) {
         left: 127px;
         top: 374px;
         transform: rotate(89.13deg);
       }
-      .t5-t3:nth-child(14) {
+      .t5-t3:nth-child(15) {
         top: 358px;
         left: 68px;
         transform: rotate(117.84deg);
       }
-      .t5-t3:nth-child(15) {
+      .t5-t3:nth-child(16) {
         left: 33px;
         top: 326px;
         transform: rotate(140.55deg);
       }
-      .t5-t3:nth-child(16) {
+      .t5-t3:nth-child(17) {
         top: 279px;
         left: 7px;
         transform: rotate(166.26deg);
       }
-      .t5-t3:nth-child(17) {
+      .t5-t3:nth-child(18) {
         left: 7px;
         top: 225px;
         transform: rotate(191.97deg);
       }
-      .t5-t3:nth-child(18) {
+      .t5-t3:nth-child(19) {
         top: 174px;
         left: 28px;
         transform: rotate(217.68deg);
       }
-      .t5-t3:nth-child(19) {
+      .t5-t3:nth-child(20) {
         left: 69px;
         top: 138px;
         transform: rotate(243.39deg);
       }
-      .t5-t4:nth-of-type(20) {
+      .t5-t4:nth-of-type(21) {
         top: 166px;
         left: 141px;
         transform: rotate(75deg);
       }
-      .t5-t4:nth-of-type(21) {
+      .t5-t4:nth-of-type(22) {
         top: 178px;
         left: 217px;
         transform: rotate(126.42deg);
       }
-      .t5-t4:nth-of-type(22) {
+      .t5-t4:nth-of-type(23) {
         top: 247px;
         left: 252px;
         transform: rotate(177.94deg);
       }
-      .t5-t4:nth-of-type(23) {
+      .t5-t4:nth-of-type(24) {
         top: 314px;
         left: 218px;
         transform: rotate(229.36deg);
       }
-      .t5-t4:nth-of-type(24) {
+      .t5-t4:nth-of-type(25) {
         top: 332px;
         left: 147px;
         transform: rotate(280.78deg);
       }
-      .t5-t4:nth-of-type(25) {
+      .t5-t4:nth-of-type(26) {
         top: 289px;
         left: 87px;
         transform: rotate(332.2deg);
       }
-      .t5-t4:nth-of-type(26) {
+      .t5-t4:nth-of-type(27) {
         top: 214px;
         left: 80px;
         transform: rotate(383.62deg);
@@ -277,15 +303,9 @@
       font-family: $font-muli-xs;
       letter-spacing: 2px;
       font-size: 0.8em;
-      &.left {
-        left: -35px;
-        top: 50%;
-        transform: rotate(-90deg) translateY(-50%);
-      }
-      &.right {
-        right: -35px;
-        top: 50%;
-        transform: rotate(90deg) translateY(-50%);
+      &.top {
+        left: 50%;
+        transform: translateX(-50%);
       }
     }
     .dot-grid {

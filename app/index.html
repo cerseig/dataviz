@@ -133,6 +133,22 @@
                           <p id="result-t2"></p>
                         </div>
                       </div>
+                      <div class="legend">
+                        <ul>
+                          <li>
+                            <div class="topic2-progress1"></div>
+                            <p>Le plus possible, jusqu'à la fin !</p>
+                          </li>
+                          <li>
+                            <div class="topic2-progress2"></div>
+                            <p>Ni plus, ni moins, que maintenant</p>
+                          </li>
+                          <li>
+                            <div class="topic2-progress3"></div>
+                            <p>Jamais</p>
+                          </li>
+                        </ul>
+                      </div>
                       <div class="btn-action">
                         <a id="go-topic3">Suivant</a>
                       </div>
@@ -199,7 +215,6 @@
                           <h4 id="percent-t4"></h4>
                           <p id="result-t4"></p>
                           <p id="text-t4"></p>
-
                         </div>
                       </div>
                       <div class="legend">
@@ -268,22 +283,27 @@
                           <li>
                             <div class="t5-t1"></div>
                             <p>A l'étranger</p>
+                            <div class="p-t5-t1"></div>
                           </li>
                           <li>
                             <div class="t5-t2"></div>
                             <p>Dans le même coin</p>
+                            <div class="p-t5-t2"></div>
                           </li>
                           <li>
                             <div class="t5-t3"></div>
                             <p>Dans le même pays</p>
+                            <div class="p-t5-t3"></div>
                           </li>
                           <li>
                             <div class="t5-t4"></div>
                             <p>A l'autre bout de la terre</p>
+                            <div class="p-t5-t4"></div>
                           </li>
                           <li>
                             <div class="t5-c1"></div>
                             <p>Je ne sais pas</p>
+                            <div class="p-t5-t5">34,5%</div>
                           </li>
                         </ul>
                       </div>
@@ -296,6 +316,7 @@
                         <div class="dot-grid"></div>
                         <div id="vizualisation7">
                           <div class="kernel"></div>
+                          <div class="data-dontknow"></div>
                         </div>
                         <h5 class="top">Loin</h5>
                       </div>
@@ -380,14 +401,12 @@
 
       <!-- LIBRARIES -->
       <script src="http://code.jquery.com/jquery-1.9.0b1.js"></script>
-      <!-- <script type="text/javascript" src="assets/js/jquery-libraries/jquery-3.2.1.min.js"></script> -->
 
       <!-- MAIN JS  -->
       <script type="text/javascript" src="assets/js/loader.js"></script>
       <script type="text/javascript" src="assets/js/app.js"></script>
 
       <script>
-        // Le DOM est pret
         $(document).ready(function() {
           $.pageLoader();
         });

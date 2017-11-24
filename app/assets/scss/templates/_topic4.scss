@@ -141,6 +141,71 @@
         margin: 0 10px;
         cursor: pointer;
       }
+      .t4-p2-c1 {
+        position: absolute;
+        top: 80px;
+        left: 100px;
+      }
+      .t4-p2-c2 {
+        position: absolute;
+        top: 177px;
+        left: 100px;
+      }
+      .t4-p2-c3 {
+        position: absolute;
+        top: 274px;
+        left: 100px;
+      }
+      .t4-p2-c4 {
+        position: absolute;
+        top: 358px;
+        left: 86px;
+      }
+      .t4-p2-c5 {
+        position: absolute;
+        top: 75px;
+        left: 200px;
+      }
+      .t4-p2-c6 {
+        position: absolute;
+        top: 168px;
+        left: 200px;
+      }
+      .t4-p2-c7 {
+        position: absolute;
+        top: 267px;
+        left: 200px;
+      }
+      .t4-p2-c8 {
+        position: absolute;
+        top: 375px;
+        left: 209px;
+      }
+      .t4-p2-c9 {
+        position: absolute;
+        top: 63px;
+        left: 310px;
+      }
+      .t4-p2-c10 {
+        position: absolute;
+        top: 159px;
+        left: 310px;
+      }
+      .t4-p2-c13 {
+        position: absolute;
+        top: 74px;
+        left: 437px;
+      }
+      .t4-p2-c14 {
+        position: absolute;
+        top: 168px;
+        left: 437px;
+      }
+      .t4-p2-c15 {
+        position: absolute;
+        top: 265px;
+        left: 437px;
+      }
     }
     object {
       border-radius: 50%;
@@ -165,6 +230,14 @@
     }
     .data-legend {
       display: none;
+      text-align: right;
+      position: absolute;
+      left: -110px;
+      h5 {
+        position: initial;
+        margin-top: 80px;
+      }
+
     }
     .dot-grid {
       background-image: radial-gradient(rgba(69, 244, 202, 0.6) 5%, transparent 0);

@@ -218,25 +218,98 @@
           "name": "Pas du tout",
           "people": "9",
           "percent": "23,7",
-          "result": "pensent qu'ils n'auront pas du tout réalisé leurs rêves."
+          "result": "pensent qu'ils n'auront pas du tout réalisé leurs rêves.",
+          "aspect": [
+            {
+              "name": "familial",
+              "percent": "17",
+              "result": "Parmis les 23,7% étudiants qui ont répondu 'Pas du tout', 17% pensaient à la famille."
+            },
+            {
+              "name": "professionnel",
+              "percent": "17",
+              "result": "Parmis les 23,7% étudiants qui ont répondu 'Pas du tout', 17% pensaient à leur carrière."
+            },
+            {
+              "name": "materiel",
+              "percent": "17",
+              "result": "Parmis les 23,7% étudiants qui ont répondu 'Pas du tout', 17% pensaient à l'aspect matériel/financier."
+            },
+            {
+              "name": "epanouissement",
+              "percent": "50",
+              "result": "Parmis les 23,7% étudiants qui ont répondu 'Pas du tout', 50% pensaient à leur épanouissement personnel."
+            }
+          ]
         },
         {
           "name": "Il restera du chemin à faire",
           "people": "25",
           "percent": "65,8",
-          "result": "pensent qu'ils leur restera du chemin à faire."
+          "result": "pensent qu'ils leur restera du chemin à faire.",
+          "aspect": [
+            {
+              "name": "familial",
+              "percent": "27",
+              "result": "Parmis les 65,8% étudiants qui ont répondu 'Il restera du chemin à faire', 27% pensaient à la famille."
+            },
+            {
+              "name": "professionnel",
+              "percent": "31",
+              "result": "Parmis les 65,8% étudiants qui ont répondu 'Il restera du chemin à faire', 31% pensaient à leur carrière."
+            },
+            {
+              "name": "materiel",
+              "percent": "29",
+              "result": "Parmis les 65,8% étudiants qui ont répondu 'Il restera du chemin à faire', 29% pensaient à l'aspect matériel/financier. "
+            },
+            {
+              "name": "epanouissement",
+              "percent": "13",
+              "result": "Parmis les 65,8% étudiants qui ont répondu 'Il restera du chemin à faire', 13% pensaient à leur épanouissement personnel."
+            }
+          ]
         },
         {
           "name": "J’aurai quasiment fait tout ce dont je rêve aujourd’hui",
           "people": "2",
           "percent": "5,3",
-          "result": "pensent qu'ils auront fait tout ce dont ils rêvent aujourd'hui."
+          "result": "pensent qu'ils auront fait tout ce dont ils rêvent aujourd'hui.",
+          "aspect": [
+            {
+              "name": "familial",
+              "percent": "50",
+              "result": "Parmis les 5,3% tudiants qui ont répondu 'J’aurai quasiment fait tout ce dont je rêve aujourd’hui', 50% pensaient à la famille."
+            },
+            {
+              "name": "professionnel",
+              "percent": "50",
+              "result": "Parmis les 5,3% étudiants qui ont répondu 'J’aurai quasiment fait tout ce dont je rêve aujourd’hui', 50% pensaient à leur carrière."
+            }
+          ]
         },
         {
           "name": "Absolument",
           "people": "2",
           "percent": "5,3",
-          "result": "pensent qu'ils auront accompli tout ce dont ils pensaient réaliser."
+          "result": "pensent qu'ils auront accompli tout ce dont ils pensaient réaliser.",
+          "aspect": [
+            {
+              "name": "familial",
+              "percent": "33",
+              "result": "Parmis les 5,3% étudiants qui ont répondu 'Absolument', 33% pensaient à la famille."
+            },
+            {
+              "name": "professionnel",
+              "percent": "33",
+              "result": "Parmis les 5,3% étudiants qui ont répondu 'Absolument', 33% pensaient à leur carrière."
+            },
+            {
+              "name": "materiel",
+              "percent": "33",
+              "result": "Parmis les 5,3% étudiants qui ont répondu 'Absolument', 33% pensaient à l'aspect matériel/financier."
+            }
+          ]
         }
       ]
     },
