@@ -1191,12 +1191,12 @@ function drawTopic6(data) {
       .mouseenter(() => {
         $('#percent-t6').text(p1);
         $('#result-t6').text(r1);
-        $('.t6-b1').css('border', '3px solid #FFF')
+        $('.t6-b1').css('box-shadow', '1px 1px 30px 0px #ffffff')
       })
       .mouseleave(() => {
         $('#percent-t6').text('');
         $('#result-t6').text('');
-        $('.t6-b1').css('border', 'none')
+        $('.t6-b1').css('box-shadow', 'none')
       });
     }
     else if (data.questions[7].responses[i].name == "Ni meilleure ni pire") {
@@ -1208,12 +1208,12 @@ function drawTopic6(data) {
       .mouseenter(() => {
         $('#percent-t6').text(p2);
         $('#result-t6').text(r2);
-        $('.t6-b2').css('border', '3px solid #FFF')
+        $('.t6-b2').css('box-shadow', '1px 1px 30px 0px #ffffff')
       })
       .mouseleave(() => {
         $('#percent-t6').text('');
         $('#result-t6').text('');
-        $('.t6-b2').css('border', 'none')
+        $('.t6-b2').css('box-shadow', 'none')
       });
     }
     else if (data.questions[7].responses[i].name == "Non") {
@@ -1225,12 +1225,12 @@ function drawTopic6(data) {
       .mouseenter(() => {
         $('#percent-t6').text(p3);
         $('#result-t6').text(r3);
-        $('.t6-b3').css('border', '3px solid #FFF')
+        $('.t6-b3').css('box-shadow', '1px 1px 30px 0px #ffffff')
       })
       .mouseleave(() => {
         $('#percent-t6').text('');
         $('#result-t6').text('');
-        $('.t6-b3').css('border', 'none')
+        $('.t6-b3').css('box-shadow', 'none')
       });
     }
 

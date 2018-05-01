@@ -20,6 +20,10 @@ a, a:hover {
 
 main {
   width: 100%;
+  max-width: 1300px;
+  max-height: 900px;
+  margin: 0 auto;
+  position: relative;
   height: 100%; }
 
 section {
@@ -75,6 +79,7 @@ section {
     transform: translateY(-20px); } }
 
 .loading {
+  display: none;
   width: 100%;
   height: 100%;
   background-image: linear-gradient(transparent 0px, transparent 2px, #13142C 2px, #13142C 40px), linear-gradient(to right, #45F4CA 0px, #45F4CA 2px, #13142C 2px, #13142C 40px);
@@ -106,6 +111,10 @@ section {
       font-size: 1.5em;
       margin: 10px; }
 
+@media screen and (min-width: 1024px) {
+  .loader {
+    display: block; } }
+
 /* ANIMATIONS */
 @-webkit-keyframes neon {
   from {
@@ -114,6 +123,7 @@ section {
     text-shadow: 0 0 5px rgba(69, 244, 202, 0.5), 0 0 10px rgba(69, 244, 202, 0.5), 0 0 15px rgba(69, 244, 202, 0.5), 0 0 20px rgba(69, 244, 202, 0.5), 0 0 25px rgba(69, 244, 202, 0.5); } }
 
 .home {
+  overflow: hidden;
   width: 100%;
   height: 100%;
   background-image: linear-gradient(transparent 0px, transparent 2px, #13142C 2px, #13142C 40px), linear-gradient(to right, #45F4CA 0px, #45F4CA 2px, #13142C 2px, #13142C 40px);
@@ -257,40 +267,76 @@ section {
         transform: scale(3); }
     .home .content-home .middle-content {
       text-align: center; }
-    .home .content-home h1 {
-      font-family: "neoneonregular";
-      font-size: 2.5em;
-      font-weight: 200;
-      color: #fefefe;
-      -webkit-transition: all 0.2s;
-      -moz-transition: all 0.2s;
-      transition: all 0.2s;
-      -webkit-animation: neon 1s ease-in-out infinite alternate;
-      -moz-animation: neon 1s ease-in-out infinite alternate;
-      animation: neon 1s ease-in-out infinite alternate;
-      letter-spacing: 5px; }
-    .home .content-home h2 {
-      font-family: "muliextralight";
-      font-weight: 300;
-      color: #fefefe;
-      font-size: 1em;
-      width: 500px;
-      margin: 50px auto 70px auto; }
-    .home .content-home a {
-      font-family: "muliextralight";
-      font-weight: 200;
-      font-size: 0.8em;
-      color: rgba(255, 255, 255, 0.6);
-      text-transform: uppercase;
-      letter-spacing: 2px;
-      padding: 15px 50px;
-      border: 2px solid;
-      transition: all 0.5s ease;
-      border-image: linear-gradient(to right, #66BEFF, #45F4CA) 10;
-      cursor: pointer; }
-      .home .content-home a:hover {
-        color: white;
-        font-weight: 500; }
+      .home .content-home .middle-content h1 {
+        font-family: "neoneonregular";
+        font-size: 2.5em;
+        font-weight: 200;
+        color: #fefefe;
+        -webkit-transition: all 0.2s;
+        -moz-transition: all 0.2s;
+        transition: all 0.2s;
+        -webkit-animation: neon 1s ease-in-out infinite alternate;
+        -moz-animation: neon 1s ease-in-out infinite alternate;
+        animation: neon 1s ease-in-out infinite alternate;
+        letter-spacing: 5px; }
+      .home .content-home .middle-content h2 {
+        font-family: "muliextralight";
+        font-weight: 300;
+        color: #fefefe;
+        font-size: 1em;
+        width: 500px;
+        margin: 50px auto 70px auto; }
+      .home .content-home .middle-content a {
+        font-family: "muliextralight";
+        font-weight: 200;
+        font-size: 0.8em;
+        color: rgba(255, 255, 255, 0.6);
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        padding: 15px 50px;
+        border: 2px solid;
+        transition: all 0.5s ease;
+        border-image: linear-gradient(to right, #66BEFF, #45F4CA) 10;
+        cursor: pointer; }
+        .home .content-home .middle-content a:hover {
+          color: white;
+          font-weight: 500; }
+    .home .content-home .middle-content-mobile {
+      width: 80%;
+      margin: 0 auto;
+      position: relative;
+      text-align: center; }
+      .home .content-home .middle-content-mobile h1 {
+        font-family: "neoneonregular";
+        font-size: 2.5em;
+        font-weight: 200;
+        color: #fefefe;
+        -webkit-transition: all 0.2s;
+        -moz-transition: all 0.2s;
+        transition: all 0.2s;
+        -webkit-animation: neon 1s ease-in-out infinite alternate;
+        -moz-animation: neon 1s ease-in-out infinite alternate;
+        animation: neon 1s ease-in-out infinite alternate;
+        letter-spacing: 5px;
+        margin-bottom: 20px; }
+      .home .content-home .middle-content-mobile h2 {
+        font-family: "muliextralight";
+        font-weight: 300;
+        color: #fefefe;
+        font-size: 1.2em;
+        width: 100%; }
+
+@media screen and (min-width: 1024px) {
+  .home {
+    overflow: initial; }
+    .home .middle-content {
+      display: block; }
+    .home .middle-content-mobile {
+      display: none; } }
+
+@media screen and (max-width: 1024px) {
+  .home .middle-content {
+    display: none; } }
 
 .topic1 {
   display: none; }

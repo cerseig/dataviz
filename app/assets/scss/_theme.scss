@@ -35,6 +35,10 @@ a, a:hover {
 }
 main {
   width: 100%;
+  max-width: 1300px;
+  max-height: 900px;
+  margin: 0 auto;
+  position: relative;
   height: 100%;
 }
 section {
